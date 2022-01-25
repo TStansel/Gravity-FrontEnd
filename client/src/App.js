@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/index';
 import SigninPage from './pages/signin';
 import AddToSlack from './pages/addtoslack';
+import './App.css';
 
 
 const App = () => {
