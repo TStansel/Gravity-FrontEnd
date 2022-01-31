@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkTitle, FooterLinkItems, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, SocialIcons, SocialIconLink, WebsiteRights } from './FooterElements';
+import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkTitle, FooterLinkItems, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, SocialIcons, SocialIconLink, SocialMediaLink, WebsiteRights } from './FooterElements';
 import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll/modules';
 
@@ -14,17 +14,13 @@ const Footer = () => {
         <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>About Us</FooterLinkTitle>
-                <FooterLink to="/signin">How it works</FooterLink>
-                <FooterLink to="/signin">Testimonials</FooterLink>
-                <FooterLink to="/signin">Terms of Service</FooterLink>
-                <FooterLink to="/signin">Careers</FooterLink>
-                <FooterLink to="/signin">Investors</FooterLink>
+              <FooterLinkTitle>Get Started</FooterLinkTitle>
+                <FooterLink to="/signin">Contact Sales</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-                <FooterLink to="/signin">About us</FooterLink>
                 <FooterLink to="/signin">How it works</FooterLink>
+                <FooterLink to="/signin">Mission</FooterLink>
                 <FooterLink to="/signin">Testimonials</FooterLink>
                 <FooterLink to="/signin">Terms of Service</FooterLink>
                 <FooterLink to="/signin">Careers</FooterLink>
@@ -33,22 +29,15 @@ const Footer = () => {
           </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>About Us</FooterLinkTitle>
-                <FooterLink to="/signin">About us</FooterLink>
-                <FooterLink to="/signin">How it works</FooterLink>
-                <FooterLink to="/signin">Testimonials</FooterLink>
-                <FooterLink to="/signin">Terms of Service</FooterLink>
-                <FooterLink to="/signin">Careers</FooterLink>
-                <FooterLink to="/signin">Investors</FooterLink>
+              <FooterLinkTitle>Resources</FooterLinkTitle>
+                <FooterLink to="/signin">Blog</FooterLink>
+                <FooterLink to="/signin">Documentation</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
-              <FooterLinkTitle>About Us</FooterLinkTitle>
-                <FooterLink to="/signin">About us</FooterLink>
-                <FooterLink to="/signin">How it works</FooterLink>
-                <FooterLink to="/signin">Testimonials</FooterLink>
-                <FooterLink to="/signin">Terms of Service</FooterLink>
-                <FooterLink to="/signin">Careers</FooterLink>
-                <FooterLink to="/signin">Investors</FooterLink>
+              <FooterLinkTitle>Social Media</FooterLinkTitle>
+                <SocialMediaLink target="_blank" href="https://www.facebook.com/dallana.wijesundera">Facebook</SocialMediaLink>
+                <SocialMediaLink target="_blank" href="https://www.instagram.com/dellwijesundera/">Instagram</SocialMediaLink>
+                <SocialMediaLink target="_blank" href="https://www.linkedin.com/company/create-oasis/about/">LinkedIn</SocialMediaLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>

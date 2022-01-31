@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Video from '../../videos/galaxy.mp4'
 
-import { Img, HeroAccent, ImgWrap, HeroWrapper, HeroRow, HeroColumn1, HeroColumn2, HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements';
+import { Img, HeroAccent, ImgWrap, HeroWrapper, HeroRow, HeroColumn1, HeroColumn2, HeroContainer, HeroBg, VideoBg, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements';
 import { Button } from '../ButtonElement';
 
 const HeroSection = () => {
@@ -15,7 +15,7 @@ const HeroSection = () => {
       <HeroContainer id="home">
 
           <HeroBg>
-            <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
+            {/* <VideoBg autoPlay loop muted src={Video} type='video/mp4'/> */}
           </HeroBg>
         <HeroWrapper>
           <HeroRow imgStart={true}>
@@ -40,7 +40,7 @@ const HeroSection = () => {
           </HeroRow>
         </HeroWrapper>
       </HeroContainer>
-      <HeroAccent>Hello</HeroAccent>
+      <HeroAccent></HeroAccent>
     </>
   );
 };

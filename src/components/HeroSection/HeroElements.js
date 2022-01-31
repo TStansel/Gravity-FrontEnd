@@ -42,14 +42,7 @@ export const VideoBg = styled.video`
   background: #232a34;
 `;
 
-// export const HeroContent = styled.div`
-//   z-index: 3;
-//   ${'' /* position: absolute; */}
-//   padding: 8px 24px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// `
+
 
 export const HeroH1 = styled.h1`
   color: #fff;
