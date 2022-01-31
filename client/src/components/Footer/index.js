@@ -55,7 +55,7 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/' onClick={toggleHome}>
-            osmosi
+            gravity
             </SocialLogo>
             <WebsiteRights> ©{new Date().getFullYear()} All rights reserved.</WebsiteRights>
             <SocialIcons>

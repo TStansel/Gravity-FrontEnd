@@ -27,7 +27,7 @@ const Navbar = ({toggle}) => {
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to='/' onClick={toggleHome}>osmosi</NavLogo>
+          <NavLogo to='/' onClick={toggleHome}>gravity</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>

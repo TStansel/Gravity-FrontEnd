@@ -11,7 +11,7 @@ const SignIn = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/">osmosi</Icon>
+          <Icon to="/">gravity</Icon>
           <FormContent>
             <Form action="#" onSubmit={handleSubmit}>
               <FormH1> Get Demo </FormH1>

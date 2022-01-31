@@ -42,15 +42,14 @@ export const VideoBg = styled.video`
   background: #232a34;
 `;
 
-export const HeroContent = styled.div`
-  z-index: 3;
-  max-width: 1200px;
-  position: absolute;
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
+// export const HeroContent = styled.div`
+//   z-index: 3;
+//   ${'' /* position: absolute; */}
+//   padding: 8px 24px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `
 
 export const HeroH1 = styled.h1`
   color: #fff;
@@ -58,11 +57,11 @@ export const HeroH1 = styled.h1`
   text-align: center;
 
   @media screen and (max-width: 768px) {
-    font-size: 48px;
+    font-size: 32px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 28px;
   }
 `
 
@@ -74,7 +73,7 @@ export const HeroP = styled.p`
   max-width: 600px;
 
   @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   @media screen and (max-width: 480px) {
@@ -98,4 +97,61 @@ export const ArrowForward = styled(MdArrowForward)`
 export const ArrowRight = styled(MdKeyboardArrowRight)`
   margin-left: 8px;
   font-size: 20px;
+`
+
+
+export const HeroWrapper = styled.div`
+  display: grid;
+  z-index: 1;
+  height: 800px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  justify-content: center;
+`
+
+export const HeroRow = styled.div`
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr);
+  align-items: center;
+  grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+
+  @media screen and (max-width: 768px) {
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2' 'col1'` : `'col2 col2' 'col1 col1'`)};
+  }
+`
+
+export const HeroColumn1 = styled.div`
+  margin-top: 45px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  grid-area: col1;
+`
+
+export const HeroColumn2 = styled.div`
+  margin-top: 45px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  grid-area: col2;
+`
+
+export const ImgWrap = styled.div`
+  max-width: 555px;
+  height: 100%;
+`
+
+export const Img = styled.img`
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding-right: 0;
+`
+
+export const HeroAccent = styled.div`
+  position: relative;
+  height: 123px;
+  left: 0px;
+  right: 0px;
+  background: #3E103F;
+  display: flex;
 `
