@@ -1,11 +1,16 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormButton } from './SigninElements';
+import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormButton } from './DemoElements';
+import { Navigate, useNavigate, Routes, Route } from 'react-router-dom';
 
-const SignIn = () => {
+
+const DemoForm = () => {
+  const navigate = useNavigate()
+
+
   const handleSubmit = (event) => {
-    alert('Thank you for being interested in Gravity! A member of our support team will be in touch shortly.');
     sendEmail(event);
+    navigate('/thankyou');
   };
 
   function sendEmail(e) {
@@ -48,4 +53,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default DemoForm;
