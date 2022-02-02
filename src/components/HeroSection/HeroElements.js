@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
+import { device } from '../values/breakpoints';
 
 export const HeroContainer = styled.div`
   background: conic-gradient(from -26.29deg at 64.69% 113.89%, #86C0F6 -31.88deg, #A259FF 11.25deg, #E086F6 166.87deg, #86C0F6 328.12deg, #A259FF 371.25deg);
@@ -46,31 +47,31 @@ export const VideoBg = styled.video`
 
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 48px;
-  text-align: center;
+  font-size: 3.052rem;
+  text-align: left;
 
   @media screen and (max-width: 768px) {
-    font-size: 32px;
+    font-size: 3.052rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 28px;
+    font-size: 3.052rem;
   }
 `
 
 export const HeroP = styled.p`
-  margin-top: 24px;
+  margin-top: 16px;
   color: #fff;
-  font-size: 24px;
-  text-align: center;
+  font-size: 1rem;
+  text-align: left;
   max-width: 600px;
 
   @media screen and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
 `
@@ -132,6 +133,12 @@ export const HeroColumn2 = styled.div`
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
+  display: block;
+
+  @media ${device.mobileL} {
+    display: none;
+  }
+  
 `
 
 export const Img = styled.img`

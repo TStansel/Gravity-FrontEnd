@@ -14,7 +14,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 800px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -62,7 +62,7 @@ export const TopLine = styled.p`
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 48px;
+  font-size: 3.052rem;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
