@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 
 const Header = ({text}) => {
   return (
-    <header style={{ color: '#ff6a95'}}>
-      <div>
-        <h1>{text}</h1>
-      </div>
-    </header>
+   <StyledHeader>
+      <h1>{text}</h1>
+   </StyledHeader> 
   );
 };
+
+const StyledHeader = styled.header`
+  color: var(--white);
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  justify-content: space-between;
+`;
 
 Header.defaultProps = {
   text: 'Frontend QA Interface',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../shared/ButtonElement';
+import { Button } from '../shared/ButtonLink';
 import { Column2 } from './InfoElements';
 
 import { InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img } from './InfoElements';

@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
 import { device } from '../values/breakpoints';
+import { Link as LinkR } from 'react-router-dom';
 
 export const HeroContainer = styled.div`
-  background: conic-gradient(from -26.29deg at 64.69% 113.89%, #86C0F6 -31.88deg, #A259FF 11.25deg, #E086F6 166.87deg, #86C0F6 328.12deg, #A259FF 371.25deg);
+  background: var(--background-primary);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
   height: 800px;
   position: relative;
-  z-index: 1
+  z-index: 1;
 
   :before {
     content: '';
@@ -46,7 +47,7 @@ export const VideoBg = styled.video`
 
 
 export const HeroH1 = styled.h1`
-  color: #fff;
+  color: var(--white);
   font-size: 3.052rem;
   text-align: left;
 
@@ -61,7 +62,7 @@ export const HeroH1 = styled.h1`
 
 export const HeroP = styled.p`
   margin-top: 16px;
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   text-align: left;
   max-width: 600px;
@@ -152,6 +153,35 @@ export const HeroAccent = styled.div`
   height: 123px;
   left: 0px;
   right: 0px;
-  background: #3E103F;
+  background: var(--primary-accent);
   display: flex;
 `
+
+export const NavBtnLink = styled(LinkR)`
+  border-radius: 50px;
+  background: var(--primary-button);
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: var(--white);
+  }
+`;
+
+export const NavBtn = styled.nav`
+  display: flex;
+  align-items: center;
+  
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;

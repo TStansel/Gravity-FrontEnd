@@ -47,6 +47,7 @@ const QuestionForm = () => {
       addQuestion(newQuestion);
     }
     setText('');
+    setBtnDisabled(true);
   }
 
   return (

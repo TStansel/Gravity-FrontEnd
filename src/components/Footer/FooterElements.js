@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import styled from 'styled-components';
+import {Link} from 'react-router-dom';
+import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa';
 
 
 export const FooterContainer = styled.footer`
@@ -42,7 +43,7 @@ export const FooterLinkItems = styled.div`
   text-align: left;
   width: 160px;
   box-sizing: border-box;
-  color: #fff
+  color: #fff;
 
   @media screen and (max-width: 420px) {
     margin: 0;
@@ -58,25 +59,25 @@ export const FooterLinkTitle = styled.h1`
 `
 
 export const FooterLink = styled(Link)`
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   margin-bottom: 0.5rem;
   font-size: 14px;
 
   &:hover {
-    color: #01bf71;
+    color: var(--primary-button);
     transition: 0.3s ease-out;
   }
 `
 
 export const SocialMediaLink = styled.a`
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   margin-bottom: 0.5rem;
   font-size: 14px;
 
   &:hover {
-    color: #01bf71;
+    color: var(--primary-button);
     transition: 0.3s ease-out;
   }
 `
@@ -99,7 +100,7 @@ export const SocialMediaWrap = styled.div`
 `
 
 export const SocialLogo = styled(Link)`
-  color: #fff;
+  color: var(--white);
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -111,7 +112,7 @@ export const SocialLogo = styled(Link)`
 `
 
 export const WebsiteRights = styled.small`
-  color: #fff;
+  color: var(--white);
   margin-bottom: 16px;
 `
 
@@ -123,6 +124,24 @@ export const SocialIcons = styled.div`
 `
 
 export const SocialIconLink = styled.a`
-  color: #fff;
+  color: var(--white);
   font-size: 24px;
 `
+
+export const InstagramIcon = styled(FaInstagram)`
+  &:hover{
+    color: var(--instagram-hex);
+  }
+`;
+
+export const LinkedInIcon = styled(FaLinkedin)`
+  &:hover{
+    color: var(--linkedin-hex);
+  }
+`;
+
+export const FacebookIcon = styled(FaFacebook)`
+  &:hover{
+    color: var(--facebook-hex);
+  }
+`;

@@ -1,6 +1,5 @@
 import React from 'react';
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkTitle, FooterLinkItems, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, SocialIcons, SocialIconLink, SocialMediaLink, WebsiteRights } from './FooterElements';
-import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
+import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkTitle, FooterLinkItems, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, SocialIcons, SocialIconLink, SocialMediaLink, WebsiteRights, LinkedInIcon, FacebookIcon, InstagramIcon } from './FooterElements';
 import { animateScroll as scroll } from 'react-scroll/modules';
 
 const Footer = () => {
@@ -48,14 +47,14 @@ const Footer = () => {
             </SocialLogo>
             <WebsiteRights> ©{new Date().getFullYear()} All rights reserved.</WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="https://www.facebook.com/dallana.wijesundera" target="_blank" aria-label="Facebook">
-                <FaFacebook />
+              <SocialIconLink href="https://www.facebook.com/dallana.wijesundera" target="_blank" aria-label="Facebook" className='i-facebook'>
+                <FacebookIcon/>
               </SocialIconLink>
-              <SocialIconLink href="https://www.instagram.com/dellwijesundera/" target="_blank" aria-label="Instagram">
-                <FaInstagram />
+              <SocialIconLink href="https://www.instagram.com/dellwijesundera/" target="_blank" aria-label="Instagram" className='i-facebook'>
+                <InstagramIcon/>
               </SocialIconLink>
               <SocialIconLink href="https://www.linkedin.com/company/create-oasis/about/" target="_blank" aria-label="LinkedIn">
-                <FaLinkedin />
+               <LinkedInIcon/> 
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>

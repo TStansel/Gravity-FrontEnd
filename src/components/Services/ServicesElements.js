@@ -76,12 +76,14 @@ export const ServicesH1 = styled.h1`
 
 export const ServicesH2 = styled.h2`
   font-size: 1.25rem;
-  background: #81FCC5;
+  background: var(--primary-button);
   margin-bottom: 10px;
   text-align: left;
+  color: var(--black);
 `
 
 export const ServicesP = styled.p`
   font-size: 1rem;
   text-align: left;
+  color: var(--black);
 `

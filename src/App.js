@@ -5,9 +5,8 @@ import Home from './pages/index';
 import Demo from './pages/demo';
 import AddToSlack from './pages/addtoslack';
 import ThankYou from './pages/thankyou';
-import './App.css';
 import './questions.css';
-import Questions from './pages/faq';
+import Questions from './pages/questionelement';
 
 
 const App = () => {
@@ -25,5 +24,4 @@ const App = () => {
 };
 
 export default App;
-
 

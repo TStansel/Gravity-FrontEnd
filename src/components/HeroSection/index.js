@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Video from '../../videos/galaxy.mp4'
 
-import { Img, HeroAccent, ImgWrap, HeroWrapper, HeroRow, HeroColumn1, HeroColumn2, HeroContainer, HeroBg, VideoBg, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements';
-import { Button } from '../shared/ButtonElement';
+import { Img, HeroAccent, ImgWrap, HeroWrapper, HeroRow, HeroColumn1, HeroColumn2, HeroContainer, HeroBg, NavBtn, VideoBg, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight, NavBtnLink } from './HeroElements';
+import { Button } from '../shared/ButtonLink';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false)
@@ -25,17 +25,15 @@ const HeroSection = () => {
               </ImgWrap>
             </HeroColumn1>
             <HeroColumn2>
-              {/* <HeroContent> */}
                 <HeroH1>We'll find the answers so you don't have to.</HeroH1>
                 <HeroP>
                 Stop wasting your time waiting for answers, and answering repetitive questions on Slack. With Gravity, you can provide your employees with the answers they need, when they need them, without disrupting the rhythm of your workflow.
                 </HeroP>
                 <HeroBtnWrapper>
-                  <Button to="about" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true" smooth={true} duration={500} spy={true} exact='true' offset={-80}>
-                    Experience Gravity {hover? <ArrowForward /> : <ArrowRight />}
-                  </Button>
+                  <NavBtn>
+                    <NavBtnLink to="/getdemo" onMouseEnter={onHover} onMouseLeave={onHover}>Experience Gravity {hover? <ArrowForward /> : <ArrowRight />}</NavBtnLink>
+                  </NavBtn>
                 </HeroBtnWrapper> 
-              {/* </HeroContent>  */}
             </HeroColumn2>
           </HeroRow>
         </HeroWrapper>

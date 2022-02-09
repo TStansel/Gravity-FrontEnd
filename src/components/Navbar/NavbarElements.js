@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
-import { COLORS } from '../values/colors'
+
 
 
 export const Nav = styled.nav`
@@ -26,7 +26,6 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   height: 80px;
   z-index: 1;
-  color: COLORS.osmosi_primary;
   width: 100%;
   padding: 0 24px;
   max-width: 1100px;
@@ -101,7 +100,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #81FCC5;
+  background: var(--primary-button);
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
@@ -114,7 +113,6 @@ export const NavBtnLink = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: var(--white);
   }
 `;
