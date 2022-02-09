@@ -6,6 +6,8 @@ import Demo from './pages/demo';
 import AddToSlack from './pages/addtoslack';
 import ThankYou from './pages/thankyou';
 import './App.css';
+import './questions.css';
+import Questions from './pages/faq';
 
 
 const App = () => {
@@ -16,6 +18,7 @@ const App = () => {
           <Route path="/getdemo" element={<Demo/>} />
           <Route path="/thankyou" element={<ThankYou/>} />
           <Route path="/addtoslack" element={<AddToSlack/>} />
+          <Route path="/questions" element={<Questions/>} />
         </Routes>
       </Router>
   );

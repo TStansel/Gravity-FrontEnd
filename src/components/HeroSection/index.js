@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Video from '../../videos/galaxy.mp4'
 
 import { Img, HeroAccent, ImgWrap, HeroWrapper, HeroRow, HeroColumn1, HeroColumn2, HeroContainer, HeroBg, VideoBg, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements';
-import { Button } from '../ButtonElement';
+import { Button } from '../shared/ButtonElement';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false)
