@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { ulid } from "ulid";
-import axios from 'axios';
 import moment from "moment";
 
 
@@ -27,14 +26,7 @@ export const QuestionsProvider = ({children}) => {
   }, [])
 
   const getQuestions = async () => {
-    // axios.get('http://localhost:4000/feedback')
-    //   .then(res => {
-    //     const questions = res.data;
-    //     setQuestionEdit(questions);
-    //     setIsLoading(false);
-    //   })
-
-    const response = await fetch(`http://localhost:4000/feedback`)
+    const response = await fetch(`/question_data`)
     const data = await response.json();
     setQuestions(data);
     setIsLoading(false);
@@ -50,21 +42,41 @@ export const QuestionsProvider = ({children}) => {
   }
 
   // update question
-  const updateQuestion = (id, updQuestion) => {
-    setQuestions(questions.map((question) => question.id === id ? { ...question, ...updQuestion } : question))
+  const updateQuestion = async (id, updQuestion) => {
+    const response = await fetch(`/question_data/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'applications/json',
+      },
+      body: JSON.stringify(updQuestion)
+    })
+
+    const data = response.json();
+
+    setQuestions(questions.map((question) => question.id === id ? { ...question, ...data } : question))
   }
 
-  const deleteQuestion = (id) => {
+  const deleteQuestion = async (id) => {
     if(window.confirm('Are you sure that you want to delete this question?')) {
+      await fetch(`/question_data/${id}`, { method: 'DELETE'});
       setQuestions(questions.filter((question) => question.id !== id));
     }
   }
 
-  const addQuestion = (newQuestion) => {
+  const addQuestion = async (newQuestion) => {
     newQuestion.id = ulid();
     newQuestion.time_stamp = moment().format('YYYY-DD-MM h:mm:ss');
-    setQuestions([newQuestion, ...questions]);
-    console.log(questions);
+    console.log(newQuestion);
+    const response = await fetch(`/question_data`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newQuestion),
+    })
+
+    const data = await response.json();
+    setQuestions([data, ...questions])
   }
 
   return <QuestionsContext.Provider value={{

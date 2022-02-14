@@ -9,12 +9,12 @@ const QuestionForm = () => {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
 
-  const {addQuestion, questionEdit, updateQuestions} = useContext(QuestionsContext);
+  const {addQuestion, questionEdit, updateQuestion} = useContext(QuestionsContext);
 
   useEffect(() => {
     if(questionEdit.edit === true) {
       setBtnDisabled(false);
-      setText(questionEdit.item.text);
+      setText(questionEdit.question.question_text);
     }
   }, [questionEdit])
 
@@ -42,7 +42,7 @@ const QuestionForm = () => {
     }
 
     if(questionEdit.edit === true) {
-      updateQuestions(questionEdit.item.id, newQuestion)
+      updateQuestion(questionEdit.question.id, newQuestion)
     } else {
       addQuestion(newQuestion);
     }
