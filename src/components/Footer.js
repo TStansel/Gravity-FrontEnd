@@ -1,10 +1,24 @@
-import { useTheme, Box, Grid, Hidden } from "@mui/material"
-import footerAdornment from '../assets/Footer Adornment.svg'
+import { useTheme, Box, Grid, Hidden, Typography } from "@mui/material"
+import footerAdornment from '../images/Background Logo.svg'
 import React from "react"
 import { Link } from "react-router-dom"
 import facebook from '../assets/facebook.svg'
 import twitter from '../assets/twitter.svg'
 import instagram from '../assets/instagram.svg'
+
+
+function Copyright(props) {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+        Gravity
+      {' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
 
 const Footer = (props) => {
   const theme = useTheme()
@@ -12,7 +26,7 @@ const Footer = (props) => {
   return (
     <footer
       style={{
-        backgroundColor: theme.palette.common.blue,
+        background: "linear-gradient(280.26deg, #A259FF -2.08%, #E086F6 46.26%, #86C0F6 96.35%)",
         width: "100%",
         zIndex: 1302,
         position: "relative",
@@ -231,13 +245,13 @@ const Footer = (props) => {
       <Box
         component="img"
         sx={{
-          width: "25em",
+          width: "20em",
           verticalAlign: "bottom",
           [theme.breakpoints.down("md")]: {
-            width: "21em",
+            width: "15em",
           },
           [theme.breakpoints.down("xs")]: {
-            width: "15em",
+            width: "12em",
           },
         }}
         alt="Company Logos"
@@ -309,6 +323,7 @@ const Footer = (props) => {
           />
         </Grid>
       </Grid>
+      <Copyright sx={{ mt: 5 }} />
     </footer>
   )
 }

@@ -18,7 +18,7 @@ export default {
       id: "image_0",
       w: 173,
       h: 172,
-      : "",
+      u: "",
       p: img_0,
       e: 0
     },

@@ -31,6 +31,13 @@ const theme = createTheme({
       fontSize: "1rem",
       textTransform: "none",
       color: "white",
+    },
+    h2: {
+      fontFamily: "Raleway",
+      fontSize: "2.5rem",
+      color: `${arcBlue}`,
+      fontWeight: 700,
+      lineWeight: 1.5,
     } 
   },
 });

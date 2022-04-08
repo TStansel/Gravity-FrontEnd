@@ -48,25 +48,24 @@ const Header = (props) => {
   }
 
   const menuOptions = useMemo(() => ([
-    {name: 'Services', link: '/services', activeIndex: 1, selectedIndex: 0},
-    {name: 'Custom Software Development', link: '/customsoftware', activeIndex: 1, selectedIndex: 1},
-    {name: 'Mobile App Develpment', link: '/mobileapps', activeIndex: 1, selectedIndex: 2},
-    {name: 'Website Development', link: '/websites', activeIndex: 1, selectedIndex: 3},
+    {name: 'Services', link: '/services', activeIndex: 0, selectedIndex: 0},
+    {name: 'Custom Software Development', link: '/customsoftware', activeIndex: 0, selectedIndex: 1},
+    {name: 'Mobile App Develpment', link: '/mobileapps', activeIndex: 0, selectedIndex: 2},
+    {name: 'Website Development', link: '/websites', activeIndex: 0, selectedIndex: 3},
   ]), [])
 
   const routes = useMemo(() => ([
-    {name: "Home", link: "/", activeIndex: 0},
     {
       name: "Services", 
       link: "/services", 
-      activeIndex: 1,
+      activeIndex: 0,
       ariaOwns: anchorEl ? "simple-menu" : undefined,
       ariaPopup: anchorEl ? "true" : undefined,
       mouseOver: event => handleClick(event)
     },
-    {name: "The Revolution", link: "/revolution", activeIndex: 2},
-    {name: "About Us", link: "/about", activeIndex: 3},
-    {name: "Contact Us", link: "/contact", activeIndex: 4},
+    {name: "How It Works", link: "/howitworks", activeIndex: 1},
+    {name: "About Us", link: "/about", activeIndex: 2},
+    {name: "Pricing", link: "/pricing", activeIndex: 3},
   ]), [anchorEl])
 
   useEffect(() => {
@@ -83,7 +82,7 @@ const Header = (props) => {
             }
           }
           break;
-        case "/estimate":
+        case "/demo":
           props.setValue(5);
           break;
         default:
@@ -130,6 +129,9 @@ const Header = (props) => {
           marginLeft: "50px",
           marginRight: "25px",
           height: "45px",
+          "&:hover": {
+            backgroundColor: theme.palette.secondary.light,
+          }
         })}
       >
         Demo
@@ -142,7 +144,7 @@ const Header = (props) => {
         keepMounted
         sx={(theme) => ({
           "& .MuiMenu-paper": {
-            backgroundColor:theme.palette.common.blue,
+            background: "linear-gradient(280.26deg, #A259FF -2.08%, #E086F6 46.26%, #86C0F6 96.35%)",
             color: 'white'
           },
           zIndex: theme.zIndex.modal + 2,
@@ -186,7 +188,7 @@ const Header = (props) => {
         onOpen={() => setOpenDrawer(true)}
         sx={(theme) => ({
           "& .MuiDrawer-paper": {
-            backgroundColor: theme.palette.common.blue,
+            background: "linear-gradient(280.26deg, #A259FF -2.08%, #E086F6 46.26%, #86C0F6 96.35%)",
             color: 'white'
           }
         })}
@@ -204,7 +206,7 @@ const Header = (props) => {
         />
         <List disablePadding>
           {
-            routes.map((route, index) => (
+            routes.map((route) => (
               <ListItemButton
                 key={`${route}${route.activeIndex}`}
                 onClick={() => {setOpenDrawer(false); props.setValue(route.activeIndex)}}
@@ -230,7 +232,10 @@ const Header = (props) => {
             divider
             component={Link}
             sx={(theme) => ({
-              backgroundColor: theme.palette.common.orange 
+              backgroundColor: theme.palette.common.orange,
+              "&:hover": {
+                backgroundColor: theme.palette.secondary.light,
+              } 
             })}
             selected={props.value === 5}
             to="/demo"
@@ -274,7 +279,7 @@ const Header = (props) => {
         <AppBar
           sx={(theme) => ({
             zIndex: theme.zIndex.modal + 1,
-            background: "conic-gradient(from -26.29deg at 64.69% 113.89%, #86C0F6 -31.88deg, #A259FF 11.25deg, #E086F6 166.87deg, #86C0F6 328.12deg, #A259FF 371.25deg)"
+            background: "linear-gradient(280.26deg, #A259FF -2.08%, #E086F6 46.26%, #86C0F6 96.35%)"
           })}
         >
           <Toolbar disableGutters>
