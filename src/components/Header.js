@@ -3,7 +3,7 @@ import { AppBar, IconButton, Toolbar, useScrollTrigger, Box, Tabs,
    Tab, Button, Menu, MenuItem, useMediaQuery, useTheme, SwipeableDrawer, List, ListItemButton, ListItemText } from '@mui/material'
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../images/Background Logo.svg'
+import logo from '../assets/gravityfullicon.svg';
 
 function ElevationScroll(props) {
   const { children} = props;
@@ -298,12 +298,14 @@ const Header = (props) => {
               <Box
                 component="img"
                 sx={{
-                  height: "8em",
+                  height: "6em",
+                  paddingTop: "1em",
+                  paddingBottom: "1em",
                   [theme.breakpoints.down("md")]: {
-                    height: "7em"
+                    height: "4em"
                   },
                   [theme.breakpoints.down("xs")]: {
-                    height: "5.5em",
+                    height: "3.5em",
                   }
                 }}
                 alt="Company Logos"

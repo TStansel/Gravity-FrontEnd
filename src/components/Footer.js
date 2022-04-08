@@ -1,5 +1,5 @@
 import { useTheme, Box, Grid, Hidden, Typography } from "@mui/material"
-import footerAdornment from '../images/Background Logo.svg'
+import footerAdornment from '../assets/gravityicon.svg'
 import React from "react"
 import { Link } from "react-router-dom"
 import facebook from '../assets/facebook.svg'
@@ -9,7 +9,7 @@ import instagram from '../assets/instagram.svg'
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="white" align="center" {...props}>
       {'Copyright © '}
         Gravity
       {' '}
@@ -245,19 +245,20 @@ const Footer = (props) => {
       <Box
         component="img"
         sx={{
-          width: "20em",
+          paddingTop: "2em",
+          width: "12em",
           verticalAlign: "bottom",
           [theme.breakpoints.down("md")]: {
-            width: "15em",
+            width: "10em",
           },
           [theme.breakpoints.down("xs")]: {
-            width: "12em",
+            width: "8em",
           },
         }}
         alt="Company Logos"
         src={footerAdornment}
       ></Box>
-
+      <Copyright sx={{ mt: 5 }} />
       <Grid 
         container
         justifyContent="flex-end"
@@ -323,7 +324,6 @@ const Footer = (props) => {
           />
         </Grid>
       </Grid>
-      <Copyright sx={{ mt: 5 }} />
     </footer>
   )
 }

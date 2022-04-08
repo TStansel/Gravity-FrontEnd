@@ -3,6 +3,7 @@ import { createTheme } from "@mui/material";
 const arcBlue = "#007bff";
 const arcOrange = "#FFBA60";
 const gradient = "conic-gradient(from -26.29deg at 64.69% 113.89%, #86C0F6 -31.88deg, #A259FF 11.25deg, #E086F6 166.87deg, #86C0F6 328.12deg, #A259FF 371.25deg)";
+const arcGrey = "#868686"
 
 const theme = createTheme({
   palette: {
@@ -35,9 +36,28 @@ const theme = createTheme({
     h2: {
       fontFamily: "Raleway",
       fontSize: "2.5rem",
-      color: `${arcBlue}`,
+      color: arcBlue,
       fontWeight: 700,
       lineWeight: 1.5,
+    },
+    h4: {
+      fontFamily: "Raleway",
+      fontSize: "1.75rem",
+      color: arcBlue,
+      fontWeight: 700,
+    },
+    subtitle1: {
+      fontSize: "1.25rem",
+      fontWeight: 300,
+      color: arcGrey,
+    },
+    learnButton: {
+      borderColor: arcBlue,
+      borderWidth: 2,
+      textTransform: "none",
+      borderRadius: 50,
+      fontFamily: "Roboto",
+      fontWeight: "bold",
     } 
   },
 });

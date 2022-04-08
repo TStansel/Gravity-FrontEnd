@@ -1,10 +1,12 @@
 import React from 'react'
 import Lottie from 'react-lottie'
 import animationData from '../animations/landinganimation/data'
-import { Grid, Button, Typography } from '@mui/material'
+import { Grid, Button, Typography, Box } from '@mui/material'
 import { useTheme } from '@mui/material'
 import ButtonArrow from './ButtonArrow'
-
+import customSoftwareIcon from '../assets/Custom Software Icon.svg'
+import mobileAppsIcon from '../assets/mobileIcon.svg'
+import { useMediaQuery } from '@mui/material'
 
 const LandingPage = () => {
   const defaultOptions = {
@@ -17,6 +19,7 @@ const LandingPage = () => {
   }
 
   const theme = useTheme()
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
 
 
   return (
@@ -33,6 +36,7 @@ const LandingPage = () => {
         }
       })}
     >
+    {/* Beginning of Hero Block */}
       <Grid item>
         <Grid container direction="row" justifyContent="flex-end" alignItems="center">
           <Grid 
@@ -42,12 +46,12 @@ const LandingPage = () => {
               minWidth: "21.5em",
               marginLeft: "1em",
               [theme.breakpoints.down("sm")]: {
-                marginLeft: "0",
+                marginLeft: 0,
               }
             })}
           >
             <Typography variant="h2" align="center">
-              Bringing West Coast Technology <br/> to the Midwest
+              We'll find the answers <br/> so you don't have to. 
             </Typography>
             <Grid container justifyContent="center" sx={{marginTop: "1em"}}>
               <Grid item>
@@ -64,18 +68,13 @@ const LandingPage = () => {
                       backgroundColor: theme.palette.secondary.light,
                     }
                   })}
-                >Free Estimate</Button>
+                >Demo</Button>
               </Grid>
               <Grid item>
                 <Button 
                   variant="outlined"
                   sx={(theme) => ({
-                    borderColor: theme.palette.common.blue,
-                    borderWidth: 2,
-                    textTransform: "none",
-                    borderRadius: 50,
-                    fontFamily: "Roboto",
-                    fontWeight: "bold",
+                    ...theme.typography.learnButton,
                     height: 45,
                     fontSize: "0.9rem",
                     width: 145,
@@ -104,6 +103,141 @@ const LandingPage = () => {
               height={"100%"}
               width={"100%"}
            ></Lottie> 
+          </Grid>
+        </Grid>
+      </Grid>
+      {/* End of Hero Block */}
+      {/* Custom Software Block */}
+      <Grid item>
+        <Grid 
+          container 
+          direction="row"
+          justifyContent={matchesSM ? "center": undefined}
+          sx={{
+            marginTop: "12em",
+            [theme.breakpoints.down("sm")]: {
+              padding: 10,
+            }
+          }}
+        >
+          <Grid item sx={{
+            marginLeft: matchesSM ? 0 : "5em",
+            textAlign: matchesSM ? "center" : undefined
+          }}>
+            <Typography variant="h4">
+              Custom Software Development
+            </Typography>
+            <Typography 
+              variant="subtitle1"
+              sx={{
+                marginBottom: "1em"
+              }}
+            >
+              Save Energy. Save Time. Save Money.
+            </Typography>
+            <Typography variant='subtitle1'>
+              Complete digital solutions, from investigation to{" "} <span style={{fontFamily: "Pacifico",
+                  color: theme.palette.common.orange,}}>celebration</span>
+            </Typography>
+            <Button 
+              variant="outlined"
+              sx={{
+                ...theme.typography.learnButton,
+                fontSize: "0.7rem",
+                height: 35,
+                [theme.breakpoints.down("md")]: {
+                  marginBottom: "2em",
+                }
+              }}
+            >
+              <span 
+                style={{
+                  marginRight: 10,
+                }}
+              >Learn More</span> 
+              <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Box
+              sx={{
+                marginLeft: "2em",
+                [theme.breakpoints.down("sm")]: {
+                  marginLeft: 0
+                }
+              }}
+              component="img"
+              alt="Company Logos"
+              src={customSoftwareIcon}
+            >
+            </Box>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      {/* IOS/Android App Development */}
+      <Grid item>
+        <Grid 
+          container 
+          direction="row"
+          justifyContent={matchesSM ? "center": undefined}
+          sx={{
+            marginTop: "12em",
+            [theme.breakpoints.down("sm")]: {
+              padding: 10,
+            }
+          }}
+        >
+          <Grid item sx={{
+            marginLeft: matchesSM ? 0 : "5em",
+            textAlign: matchesSM ? "center" : "flex-end"
+          }}>
+            <Typography variant="h4">
+              iOS/Android App Development
+            </Typography>
+            <Typography 
+              variant="subtitle1"
+              sx={{
+                marginBottom: "1em"
+              }}
+            >
+              Extend Functionality. Extend Access. Increase Engagement.
+            </Typography>
+            <Typography variant='subtitle1'>
+              Integrate your web experience or create a standalone app{matchesSM ? null : <br />} with either mobile platform
+            </Typography>
+            <Button 
+              variant="outlined"
+              sx={{
+                ...theme.typography.learnButton,
+                fontSize: "0.7rem",
+                height: 35,
+                [theme.breakpoints.down("md")]: {
+                  marginBottom: "2em",
+                }
+              }}
+            >
+              <span 
+                style={{
+                  marginRight: 10,
+                }}
+              >Learn More</span> 
+              <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Box
+              sx={{
+                marginLeft: "2em",
+                [theme.breakpoints.down("sm")]: {
+                  marginLeft: 0
+                }
+              }}
+              component="img"
+              alt="Company Logos"
+              src={customSoftwareIcon}
+            >
+            </Box>
           </Grid>
         </Grid>
       </Grid>
