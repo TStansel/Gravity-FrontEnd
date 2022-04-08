@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Home from './pages/index';
-import Demo from './pages/demo';
-import AddToSlack from './pages/addtoslack';
-import ThankYou from './pages/thankyou';
-import './questions.css';
-import Questions from './pages/questionelement';
-
+import theme from './Theme';
+import Home from './pages/Home';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { ThemeProvider } from '@mui/material'; 
 
 const App = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [value, setValue] = useState(0);
+
   return (
-      <Router>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/getdemo" element={<Demo/>} />
-          <Route path="/thankyou" element={<ThankYou/>} />
-          <Route path="/addtoslack" element={<AddToSlack/>} />
-          <Route path="/questions" element={<Questions/>} />
+          <Route path='/' element={<Home/>}/>
         </Routes>
-      </Router>
-  );
-};
+        <Footer/>
+      </ThemeProvider>
+    </Router>
+  )
+}
 
-export default App;
-
+export default App
