@@ -1,12 +1,13 @@
 import React from 'react'
 import Lottie from 'react-lottie'
 import animationData from '../animations/landinganimation/data'
-import { Grid, Button, Typography, Box } from '@mui/material'
+import { Grid, Button, Typography, Box, Card, CardActions, CardContent } from '@mui/material'
 import { useTheme } from '@mui/material'
 import ButtonArrow from './ButtonArrow'
 import customSoftwareIcon from '../assets/Custom Software Icon.svg'
 import mobileAppsIcon from '../assets/mobileIcon.svg'
 import { useMediaQuery } from '@mui/material'
+import websitesIcon from '../assets/websiteIcon.svg'
 
 const LandingPage = () => {
   const defaultOptions = {
@@ -180,7 +181,7 @@ const LandingPage = () => {
         <Grid 
           container 
           direction="row"
-          justifyContent={matchesSM ? "center": undefined}
+          justifyContent={matchesSM ? "center": "flex-end"}
           sx={{
             marginTop: "12em",
             [theme.breakpoints.down("sm")]: {
@@ -189,8 +190,7 @@ const LandingPage = () => {
           }}
         >
           <Grid item sx={{
-            marginLeft: matchesSM ? 0 : "5em",
-            textAlign: matchesSM ? "center" : "flex-end"
+            textAlign: matchesSM ? "center" : undefined
           }}>
             <Typography variant="h4">
               iOS/Android App Development
@@ -225,7 +225,7 @@ const LandingPage = () => {
               <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
             </Button>
           </Grid>
-          <Grid item>
+          <Grid item sx={{marginRight: matchesSM ? 0 : "5em"}}>
             <Box
               sx={{
                 marginLeft: "2em",
@@ -234,8 +234,75 @@ const LandingPage = () => {
                 }
               }}
               component="img"
-              alt="Company Logos"
-              src={customSoftwareIcon}
+              alt="Mobile Apps Icon"
+              src={mobileAppsIcon}
+            >
+            </Box>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      {/* Websites Block */}
+      <Grid item>
+        <Grid 
+          container 
+          direction="row"
+          justifyContent={matchesSM ? "center": undefined}
+          sx={{
+            marginTop: "12em",
+            [theme.breakpoints.down("sm")]: {
+              padding: 10,
+            }
+          }}
+        >
+          <Grid item sx={{
+            marginLeft: matchesSM ? 0 : "5em",
+            textAlign: matchesSM ? "center" : undefined
+          }}>
+            <Typography variant="h4">
+              Website Development
+            </Typography>
+            <Typography 
+              variant="subtitle1"
+              sx={{
+                marginBottom: "1em"
+              }}
+            >
+              Watch More. Discover More. Sell More.
+            </Typography>
+            <Typography variant='subtitle1'>
+              Optimized for Search Engines, built for speed.
+            </Typography>
+            <Button 
+              variant="outlined"
+              sx={{
+                ...theme.typography.learnButton,
+                fontSize: "0.7rem",
+                height: 35,
+                [theme.breakpoints.down("md")]: {
+                  marginBottom: "2em",
+                }
+              }}
+            >
+              <span 
+                style={{
+                  marginRight: 10,
+                }}
+              >Learn More</span> 
+              <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
+            </Button>
+          </Grid>
+          <Grid item sx={{marginRight: matchesSM ? 0 : "5em"}}>
+            <Box
+              sx={{
+                marginLeft: "2em",
+                [theme.breakpoints.down("sm")]: {
+                  marginLeft: 0
+                }
+              }}
+              component="img"
+              alt="website icon"
+              src={websitesIcon}
             >
             </Box>
           </Grid>
