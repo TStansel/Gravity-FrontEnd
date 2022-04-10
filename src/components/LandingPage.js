@@ -1,7 +1,8 @@
 import React from 'react'
 import Lottie from 'react-lottie'
 import animationData from '../animations/landinganimation/data'
-import { Grid, Button, Typography, Box, Card, CardActions, CardContent } from '@mui/material'
+import { Grid, Button, Typography, Box, Card, CardContent } from '@mui/material'
+import CallToAction from './CallToAction'
 import { useTheme } from '@mui/material'
 import ButtonArrow from './ButtonArrow'
 import centralizedIcon from '../assets/gravityGradientCentralizedIcon.svg'
@@ -23,8 +24,6 @@ const LandingPage = () => {
 
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"))
-
 
   return (
     <Grid 
@@ -495,6 +494,11 @@ const LandingPage = () => {
           >
           </Box>
         </Grid>
+      </Grid>
+
+      {/* Call to Action Block */}
+      <Grid item>
+        <CallToAction/>
       </Grid>
     </Grid>
   )
