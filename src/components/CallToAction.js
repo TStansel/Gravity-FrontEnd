@@ -8,7 +8,7 @@ import mobileBackground from '../assets/mobileBackground.jpg'
 
 const CallToAction = () => {
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
+  const matchesSM = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
     <Grid 
@@ -27,9 +27,10 @@ const CallToAction = () => {
           backgroundAttachment: "inherit"
         }
       }}
-      justifyContent="space-between"
+      justifyContent={matchesSM ? "center" : "space-between"}
+      direction={matchesSM ? "column" : "row"}
     >
-        <Grid item sx={{marginLeft: "5em"}}>
+        <Grid item sx={{marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : "inherit"}}>
           <Grid container direction="column">
             <Grid item>
               <Typography variant="h2">
@@ -38,7 +39,7 @@ const CallToAction = () => {
               <Typography variant="subtitle2" sx={{fontSize: "1.5rem"}}>
                 Take Advantage of the 21st Century
               </Typography>
-              <Grid container item>
+              <Grid container justifyContent={matchesSM ? "center" : undefined} item>
                   <Button 
                       variant="outlined"
                       sx={(theme) => ({
@@ -46,13 +47,13 @@ const CallToAction = () => {
                         height: 45,
                         fontSize: "0.9rem",
                         width: 145,
-                        marginRight: "5em",
-                        marginLeft: "2em"
+                        marginRight: matchesSM ? 0 : "5em",
+                        marginLeft: matchesSM ? 0 : "2em"
                       })}
                     >
                       <span style={{marginRight: 5}}>Learn More</span>
-                    <ButtonArrow width={15} height={15} fill={theme.palette.common.blue}/></Button>
-                </Grid>
+                    <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/></Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
@@ -67,6 +68,12 @@ const CallToAction = () => {
               backgroundColor: theme.palette.common.orange,
               fontSize: "1.5rem",
               marginRight: "5em",
+              marginLeft: "2em",
+              [theme.breakpoints.down("md")]: {
+                marginLeft: 0,
+                marginTop: "5em",
+                marginRight: 0,
+              }
             }}
           >
             Free Estimate
