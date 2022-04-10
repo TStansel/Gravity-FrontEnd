@@ -44,25 +44,6 @@ const Footer = (props) => {
             <Grid container direction="column" spacing={2}>
               <Grid 
                 item
-                onClick={() => props.setValue(0)}
-                component={Link}
-                to="/"
-                sx={{
-                  color: "white",
-                  fontFamily: "Arial",
-                  fontSize: "0.75rem",
-                  fontWeight: "bold",
-                  textDecoration: "none",
-                }}
-              >
-                Home
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item sx={{margin: "3em"}}>
-            <Grid container direction="column" spacing={2}>
-              <Grid 
-                item
                 onClick={() => {props.setValue(1); props.setSelectedIndex(0)}}
                 component={Link}
                 to="/services"
@@ -129,7 +110,7 @@ const Footer = (props) => {
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
-                to="/revolution"
+                to="/howitworks"
                 sx={{
                   color: "white",
                   fontFamily: "Arial",
@@ -144,7 +125,7 @@ const Footer = (props) => {
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
-                to="/revolution"
+                to="/howitworks"
                 sx={{
                   color: "white",
                   fontFamily: "Arial",
@@ -159,7 +140,7 @@ const Footer = (props) => {
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
-                to="/revolution"
+                to="/howitworks"
                 sx={{
                   color: "white",
                   fontFamily: "Arial",
