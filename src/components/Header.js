@@ -123,6 +123,9 @@ const Header = (props) => {
       <Button 
         variant="contained" 
         color="secondary"
+        component={Link}
+        to="/demo"
+        onClick={() => props.setValue(5)}
         sx={(theme) => ({
           ...theme.typography.estimate,
           borderRadius: "50px",

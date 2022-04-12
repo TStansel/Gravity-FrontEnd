@@ -2,17 +2,17 @@ import React from 'react'
 import Lottie from 'react-lottie'
 import animationData from '../animations/landinganimation/data'
 import { Grid, Button, Typography, Box, Card, CardContent } from '@mui/material'
-import CallToAction from './CallToAction'
+import CallToAction from '../components/CallToAction'
+import { Link } from 'react-router-dom'
 import { useTheme } from '@mui/material'
-import ButtonArrow from './ButtonArrow'
+import ButtonArrow from '../components/ButtonArrow'
 import centralizedIcon from '../assets/gravityGradientCentralizedIcon.svg'
 import heuristicsIcon from '../assets/gravityGradientHeuristicsIcon.svg'
 import { useMediaQuery } from '@mui/material'
 import integrationsIcon from '../assets/gravityGradientIntegrationsIcon.svg'
 import revolutionBackground from '../assets/repeatingBackground.svg'
 
-
-const LandingPage = () => {
+const LandingPage = (props) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -60,6 +60,9 @@ const LandingPage = () => {
               <Grid item>
                 <Button 
                   variant='contained'
+                  component={Link}
+                  onClick={() => props.setValue(5)}
+                  to="/demo"
                   sx={(theme) => ({
                     ...theme.typography.estimate,
                     backgroundColor: theme.palette.common.orange,
@@ -76,6 +79,9 @@ const LandingPage = () => {
               <Grid item>
                 <Button 
                   variant="outlined"
+                  component={Link}
+                  onClick={() => props.setValue(2)}
+                  to="/howitworks"
                   sx={(theme) => ({
                     ...theme.typography.learnButton,
                     height: 45,
@@ -144,6 +150,9 @@ const LandingPage = () => {
             </Typography>
             <Button 
               variant="outlined"
+              component={Link}
+              to="/customsoftware"
+              onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
               sx={{
                 ...theme.typography.learnButton,
                 fontSize: "0.7rem",
@@ -210,7 +219,10 @@ const LandingPage = () => {
               Integrate your data
             </Typography>
             <Button 
+              component={Link}
+              to="/mobileapps"
               variant="outlined"
+              onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
               sx={{
                 ...theme.typography.learnButton,
                 fontSize: "0.7rem",
@@ -253,7 +265,7 @@ const LandingPage = () => {
           direction="row"
           justifyContent={matchesSM ? "center": undefined}
           sx={{
-            marginTop: "12em",
+            marginTop: "10em",
             [theme.breakpoints.down("sm")]: {
               padding: 10,
             }
@@ -278,7 +290,10 @@ const LandingPage = () => {
               Use your data to discover trends
             </Typography>
             <Button 
+              component={Link}
+              to="/websites"
               variant="outlined"
+              onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
               sx={{
                 ...theme.typography.learnButton,
                 fontSize: "0.7rem",
@@ -323,7 +338,7 @@ const LandingPage = () => {
           sx={{
                 height: "100em",
                 textAlign: "center",
-                marginTop: "12em",
+                marginTop: "10em",
               }}
         >
           <Card
@@ -359,7 +374,10 @@ const LandingPage = () => {
                     Visionary insights coupled with cutting edge technology is a recipe for revolution
                   </Typography>
                   <Button 
+                    onClick={() => props.setValue(2)}
                     variant="outlined"
+                    component={Link}
+                    to="/howitworks"
                     sx={(theme) => ({
                       ...theme.typography.learnButton,
                       height: 45,
@@ -406,7 +424,6 @@ const LandingPage = () => {
               textAlign: matchesSM ? "center" : "inherit"
             }}
           direction={matchesSM ? "column": "row"}
-          spacing= {matchesSM ? 10 : 0 }
         >
         <Grid 
             item
@@ -415,7 +432,7 @@ const LandingPage = () => {
               marginLeft: matchesSM ? 0 : "5em",
             }}
           >
-            <Grid container direction="column">
+            <Grid container sx={{marginBottom: matchesSM ? "10em": 0}} direction="column">
               <Typography 
                 variant="h2"
                 sx={{
@@ -429,6 +446,9 @@ const LandingPage = () => {
               </Typography>
               <Grid item>
                 <Button 
+                    onClick={() => props.setValue(3)}
+                    component={Link}
+                    to="/about"
                     variant="outlined"
                     sx={(theme) => ({
                       ...theme.typography.learnButton,
@@ -466,6 +486,9 @@ const LandingPage = () => {
               </Typography>
               <Grid item>
                 <Button 
+                    onClick={() => props.setValue(4)}
+                    component={Link}
+                    to="/contact"
                     variant="outlined"
                     sx={(theme) => ({
                       ...theme.typography.learnButton,
@@ -498,7 +521,7 @@ const LandingPage = () => {
 
       {/* Call to Action Block */}
       <Grid item>
-        <CallToAction/>
+        <CallToAction setValue={props.setValue}/>
       </Grid>
     </Grid>
   )

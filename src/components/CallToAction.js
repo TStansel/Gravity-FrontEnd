@@ -1,12 +1,13 @@
 import { Typography, Grid, Button, Box } from '@mui/material'
 import ButtonArrow from './ButtonArrow'
+import { Link } from 'react-router-dom'
 import { useTheme } from '@mui/material'
 import { useMediaQuery } from '@mui/material'
 import React from 'react'
 import background from '../assets/background.jpg'
 import mobileBackground from '../assets/mobileBackground.jpg'
 
-const CallToAction = () => {
+const CallToAction = (props) => {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("md"))
 
@@ -41,6 +42,9 @@ const CallToAction = () => {
               </Typography>
               <Grid container justifyContent={matchesSM ? "center" : undefined} item>
                   <Button 
+                      onClick={() => props.setValue(4)}
+                      component={Link}
+                      to="/demo"
                       variant="outlined"
                       sx={(theme) => ({
                         ...theme.typography.learnButton,
@@ -59,6 +63,7 @@ const CallToAction = () => {
         </Grid>
         <Grid item>
           <Button 
+            onClick={() => props.setValue(5)}
             variant="contained"
             sx={{
               ...theme.typography.estimate,
@@ -69,6 +74,9 @@ const CallToAction = () => {
               fontSize: "1.5rem",
               marginRight: "5em",
               marginLeft: "2em",
+              "&:hover": {
+                backgroundColor: theme.palette.secondary.light,
+              },
               [theme.breakpoints.down("md")]: {
                 marginLeft: 0,
                 marginTop: "5em",
