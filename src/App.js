@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import CustomSoftware from './pages/CustomSoftware';
 import MobileApps from './pages/MobileApps';
 import Websites from './pages/Websites';
+import Revolution from './pages/Revolution';
 
 const App = () => {
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/customsoftware' element={<CustomSoftware setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
           <Route path='/mobileapps' element={<MobileApps setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
           <Route path='/websites' element={<Websites setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+          <Route path='/revolution' element={<Revolution setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
         </Routes>
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex}/>
       </ThemeProvider>
