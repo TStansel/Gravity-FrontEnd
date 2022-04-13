@@ -1,4 +1,4 @@
-import { Typography, Grid, Button, Box } from '@mui/material'
+import { Typography, Grid, Button } from '@mui/material'
 import ButtonArrow from './ButtonArrow'
 import { Link } from 'react-router-dom'
 import { useTheme } from '@mui/material'

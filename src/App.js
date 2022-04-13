@@ -9,6 +9,8 @@ import Pricing from './pages/Pricing';
 import LandingPage from './pages/LandingPage';
 import Services from './pages/Services';
 import CustomSoftware from './pages/CustomSoftware';
+import MobileApps from './pages/MobileApps';
+import Websites from './pages/Websites';
 
 const App = () => {
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -23,6 +25,8 @@ const App = () => {
           <Route path='/pricing' element={<Pricing/>}/>
           <Route path='/services' element={<Services setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
           <Route path='/customsoftware' element={<CustomSoftware setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+          <Route path='/mobileapps' element={<MobileApps setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+          <Route path='/websites' element={<Websites setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
         </Routes>
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex}/>
       </ThemeProvider>
