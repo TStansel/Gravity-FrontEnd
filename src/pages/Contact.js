@@ -5,6 +5,7 @@ import { useTheme } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useEffect } from 'react'
+import axios from 'axios'
 
 import ButtonArrow from '../components/ButtonArrow'
 
@@ -74,43 +75,32 @@ const Contact = (props) => {
   };
 
   const onConfirm = () => {
-    setLoading(false)
-    toast.success("Message Sent Successfully! Thank You!")
-    setOpen(false);
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
-
-
-    // axios
-    //   .get(
-    //     "https://us-central1-material-ui-course.cloudfunctions.net/sendMail",
-    //     {
-    //       params: {
-    //         email: email,
-    //         name: name,
-    //         phone: phone,
-    //         message: message
-    //       }
-    //     }
-    //   )
-    //   .then(res => {
-    //     setLoading(false);
-    //     setOpen(false);
-    //     setName("");
-    //     setEmail("");
-    //     setPhone("");
-    //     setMessage("");
-    //     setAlert({ open: true, color: "#4BB543" });
-    //     setAlertMesssage("Message sent successfully!");
-    //   })
-    //   .catch(err => {
-    //     setLoading(false);
-    //     setAlert({ open: true, color: "#FF3232" });
-    //     setAlertMesssage("Something went wrong! Please try again.");
-    //     console.error(err);
-    //   });
+    axios
+      .get(
+        "https://us-central1-gravity-dee46.cloudfunctions.net/sendMail",
+        {
+          params: {
+            email: email,
+            name: name,
+            phone: phone,
+            message: message
+          }
+        }
+      )
+      .then(res => {
+        setLoading(false);
+        setOpen(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        toast.success("Message sent successfully!")
+      })
+      .catch(err => {
+        setLoading(false);
+        toast.error("Something went wrong!")
+        console.error(err);
+      });
     
   };
 
@@ -139,31 +129,31 @@ const Contact = (props) => {
         xl={3}
       >
         <Grid item>
-          <Grid container direction="column">
+          <Grid container direction="column" alignItems="center">
             <Grid item>
               <Typography
-                align={matchesMD ? "center" : undefined}
+                align="center"
                 variant="h2"
                 style={{ lineHeight: 1 }}
               >
                 Contact Us
               </Typography>
               <Typography
-                align={matchesMD ? "center" : undefined}
+                align="center"
                 variant="body1"
                 style={{ color: theme.palette.common.blue }}
               >
                 We're waiting.
               </Typography>
               <Typography
-                align={matchesMD ? "center" : undefined}
+                align="center"
                 variant="body1"
                 style={{ color: theme.palette.common.blue }}
               >
                 A member of our support team will be in touch.
               </Typography>
             </Grid>
-            <Grid item container style={{ marginTop: "2em" }}>
+            <Grid item container justifyContent="center" style={{ marginTop: "2em" }}>
               <Grid item>
                 <img
                   src={phoneIcon}
@@ -185,7 +175,7 @@ const Contact = (props) => {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item container style={{ marginBottom: "2em" }}>
+            <Grid item container justifyContent="center" style={{ marginBottom: "2em" }}>
               <Grid item>
                 <img
                   src={emailIcon}
@@ -202,7 +192,7 @@ const Contact = (props) => {
                     href="mailto:zachary@gmail.com"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    zachary@gmail.com
+                    cory@gmail.com
                   </a>
                 </Typography>
               </Grid>
@@ -447,16 +437,14 @@ const Contact = (props) => {
           <Grid container direction="column">
             <Grid item>
               <Typography align={matchesMD ? "center" : undefined} variant="h2">
-                Simple Software.
-                <br />
-                Revolutionary Results.
+                Making the Q&A Process Seamless
               </Typography>
               <Typography
                 align={matchesMD ? "center" : undefined}
                 variant="subtitle2"
                 style={{ fontSize: "1.5rem" }}
               >
-                Take advantage of the 21st Century.
+                We'll find the answers so you don't have to
               </Typography>
               <Grid container justifyContent={matchesMD ? "center" : undefined} item>
                 <Button
