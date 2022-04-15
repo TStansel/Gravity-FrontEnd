@@ -11,9 +11,6 @@ import Revolution from './pages/Revolution';
 import About from './pages/About';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import CustomIntegrations from './pages/CustomIntegrations';
-import DataCentralization from './pages/DataCentralization';
-import Analysis from './pages/Analysis';
 import Contact from './pages/Contact';
 
 const App = () => {
@@ -28,9 +25,6 @@ const App = () => {
           <Routes>
             <Route path='/' element={<LandingPage setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
             <Route path='/services' element={<Services setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-            <Route path='/customintegrations' element={<CustomIntegrations setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-            <Route path='/datacentralization' element={<DataCentralization setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-            <Route path='/analysis' element={<Analysis setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
             <Route path='/howitworks' element={<Revolution setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
             <Route path='/about' element={<About setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
             <Route path='/contact' element={<Contact setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>

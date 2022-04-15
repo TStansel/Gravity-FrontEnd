@@ -58,7 +58,7 @@ const Footer = (props) => {
               <Grid 
                 item
                 component={Link}
-                to="/customintegrations"
+                to="/services"
                 onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
                 sx={{
                   color: "white",
@@ -73,7 +73,7 @@ const Footer = (props) => {
               <Grid 
                 item
                 component={Link}
-                to="/datacentralization"
+                to="/services"
                 onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
                 sx={{
                   color: "white",
@@ -88,7 +88,7 @@ const Footer = (props) => {
               <Grid 
                 item
                 component={Link}
-                to="/analysis"
+                to="/services"
                 onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
                 sx={{
                   color: "white",
@@ -254,7 +254,7 @@ const Footer = (props) => {
         <Grid 
           item 
           component="a" 
-          href="https://www.facebook.com" 
+          href="https://www.linkedin.com/company/gravity-data-platforms/about/" 
           rel="noopener noreferrer" 
           target="_blank"
         >

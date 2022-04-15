@@ -4,6 +4,7 @@ import { useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { useEffect } from 'react'
 
 import ButtonArrow from '../components/ButtonArrow'
 
@@ -20,6 +21,10 @@ const Contact = (props) => {
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const [name, setName] = useState("");
 

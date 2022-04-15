@@ -2,33 +2,58 @@ import React from 'react'
 import { useTheme } from '@mui/material'
 import { Typography, Grid } from '@mui/material'
 import { useMediaQuery } from '@mui/material'
+import { useEffect } from 'react'
 
 import vision from '../assets/vision.svg'
-import review from '../assets/reviewIcon.svg'
-import launch from '../assets/launchIcon.svg'
-import maintain from '../assets/maintainIcon.svg'
-import iterate from '../assets/iterateIcon.svg'
 import CallToAction from '../components/CallToAction'
+
+import scanningAnimation from '../animations/scanningdocuments.json'
+import dominoEffect from '../animations/dominoeffect.json'
+import modeling from '../animations/machinelearning.json'
+import Lottie from 'react-lottie'
 
 const Revolution = (props) => {
   const theme = useTheme()
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
   
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: technologyAnimation,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice'
-  //   }
-  // }
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: scanningAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
+  const mlOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: modeling,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
+  const dominoOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: dominoEffect,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Grid container direction="column">
       <Grid
         item
         sx={{
+          paddingTop: "3em",
           paddingLeft: "5em",
           paddingRight: "5em",
           [theme.breakpoints.down('sm')]: {
@@ -177,7 +202,8 @@ const Revolution = (props) => {
           </Typography>
         </Grid>
       </Grid>
-      {/* Review area */}
+
+      {/* Index area */}
       <Grid
         item
         container
@@ -190,11 +216,11 @@ const Revolution = (props) => {
             paddingRight: '1.5em',
           },
           backgroundColor: "#39B54A",
-          height: "40em"
+          height: matchesMD ? "60em" : "45em"
         }} 
-        justifyContent="center"
+        justifyContent={matchesMD ? "flex-start" : "center"}
       >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
+        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} md>
           <Grid item>
             <Typography
               variant="h4"
@@ -248,90 +274,19 @@ const Revolution = (props) => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img width="40%" src={review} alt="Magnifying glass"/>
+        <Grid item md style={{alignSelf: "center"}}>
+          <Lottie 
+            options={defaultOptions}
+            height={400}
+            width={400}
+          >
+          </Lottie>
         </Grid>
       </Grid>
 
-      {/* Launch area */}
-      <Grid
-        item
-        container
-        direction={matchesMD ? "column" : "row"}
-        sx={{
-          paddingLeft: "5em",
-          paddingRight: "5em",
-          [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
-          },
-          backgroundColor: "#C1272D",
-          height: "40em"
-        }} 
-        justifyContent="center"
-      >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
-          <Grid item>
-            <Typography
-              variant="h4"
-              gutterBottom
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#000",
-                marginTop: "5em"
-              }}
-            >
-              Launch
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              The moment we've all been waiting for.
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              When construction comes to a close you're the first one to know.
-              We'll give our final demonstration to show off your shiny new
-              software in the wild so you know exactly how it will look to your
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              When you say the word, we press the button and launch your project
-              out to the public. We're there to ensure everything goes to plan
-              so you can start reaping the rewards of your technological
-              investment immediately.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img width="10%" src={launch} style={{maxWidth: 200}} alt="Rocket figure"/>
-        </Grid>
-      </Grid>
 
-      {/* Launch area */}
-      <Grid
+       {/* Model area */}
+       <Grid
         item
         container
         direction={matchesMD ? "column" : "row"}
@@ -343,36 +298,36 @@ const Revolution = (props) => {
             paddingRight: '1.5em',
           },
           backgroundColor: "#8E45CE",
-          height: "40em"
+          height: matchesMD ? "60em" : "45em"
         }} 
-        justifyContent="center"
+        justifyContent={matchesMD ? "flex-start" : "center"}
       >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
+        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} md>
           <Grid item>
             <Typography
               variant="h4"
-              gutterBottom
               align={matchesMD ? "center" : undefined}
+              gutterBottom
               style={{
                 color: "#000",
                 marginTop: "5em"
               }}
             >
-              Maintain
+              Modeling
             </Typography>
           </Grid>
           <Grid item>
             <Typography
               variant="body1"
-              paragraph
               align={matchesMD ? "center" : undefined}
+              paragraph
               style={{
                 color: "#fff",
                 maxWidth: "20em"
               }}
             > 
-              After a successful launch we keep in close contact to listen to
-              feedback and hear how the project is being received.
+              Cutting-edge advancements in machine learning like natural language processing
+              have made 
             </Typography>
             <Typography
               variant="body1"
@@ -383,18 +338,36 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              From there on out we make sure your application is kept up to date
-              and taking advantage of the best features and practices available.
-              When new developments arise or new techniques are discovered in
-              future projects, we will implement those advancements in your
-              project as part of our routine maintenance.
+              We give you an interactive demonstration of the mockups,
+              thoroughly explaining the thought process that went into each
+              screen and every anticipated feature.
+            </Typography>
+            <Typography
+              variant="body1"
+              paragraph
+              align={matchesMD ? "center" : undefined}
+              style={{
+                color: "#fff",
+                maxWidth: "20em"
+              }}
+            > 
+              Once you're completely satisfied with the vision for our solution
+              we get down to the nitty gritty, fine-details of design.
             </Typography>
           </Grid>
         </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img width="40%" src={maintain} style={{maxWidth: 500}} alt="Building figure"/>
+        <Grid item md style={{alignSelf: "center"}}>
+          <Lottie 
+            options={mlOptions}
+            height={400}
+            width={400}
+          >
+          </Lottie>
         </Grid>
       </Grid>
+
+     
+      
 
       {/* Iterate area */}
       <Grid
@@ -409,11 +382,17 @@ const Revolution = (props) => {
             paddingRight: '1.5em',
           },
           backgroundColor: "#86C0F6",
-          height: "40em"
+          height: matchesMD ? "65em" : "50em"
         }} 
-        justifyContent="center"
+        justifyContent={matchesMD ? "flex-start" : "center"}
       >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
+        <Grid 
+          item 
+          container 
+          direction="column" 
+          alignItems={matchesMD ? "center" : undefined} 
+          md
+        >
           <Grid item>
             <Typography
               variant="h4"
@@ -439,7 +418,9 @@ const Revolution = (props) => {
             > 
               As more and more questions are asked,
               Gravity's model becomes more and more robust,
-              and you can expect the answers to become 
+              and you can expect the answers to become more accurate
+              as the model continues to be fine-tuned to your organizations
+              needs. 
             </Typography>
             <Typography
               variant="body1"
@@ -450,28 +431,19 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              By planning for future features and changes we can build and
-              evolve your application over time. As new use cases and customer
-              needs develop we can respond with continuous integration of new
-              content.
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Our iterative process will keep you current and competitive,
-              allowing you to quickly implement changes instead of waiting
-              months for a single update.
+              Gravity will automatically remind you when questions are falling out of date
+              or need to be reexamined for accuracy so that your knowledge base can stay 
+              up to date at all times.
             </Typography>
           </Grid>
         </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img width="40%" src={iterate} alt="Falling Dominoes"/>
+        <Grid item md style={{alignSelf: "center"}}>
+          <Lottie 
+              options={dominoOptions}
+              height={400}
+              width={400}
+            >
+            </Lottie>
         </Grid>
       </Grid>
 

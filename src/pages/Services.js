@@ -3,14 +3,16 @@ import { Typography, Grid, Button, Box } from '@mui/material'
 import centralizedIcon from '../assets/gravityGradientCentralizedIcon.svg'
 import heuristicsIcon from '../assets/gravityGradientHeuristicsIcon.svg'
 import integrationsIcon from '../assets/gravityGradientIntegrationsIcon.svg'
-import ButtonArrow from '../components/ButtonArrow'
 import { useMediaQuery, useTheme } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Services = (props) => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const theme = useTheme()
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
@@ -80,66 +82,58 @@ const Services = (props) => {
         </Grid>
       </Grid>
 
-
-      {/* Custom Software Block */}
+      {/* Data Centralization Block */}
+      <Typography 
+        variant="h3" 
+        align="center"
+        sx={{
+          marginTop: "1em"
+        }} 
+        gutterBottom
+      >
+        Data Centralization
+      </Typography>
       <Grid item>
         <Grid 
-          container 
-          direction="row"
-          justifyContent={matchesSM ? "center": undefined}
+          container
+          justifyContent={matchesMD ? "center" : "space-between"}
+          direction={matchesMD ? "column":"row"}
           sx={{
-            marginTop: "5em",
+            paddingTop: "3em",
+            paddingLeft: "5em",
+            paddingRight: "5em",
             [theme.breakpoints.down("sm")]: {
-              padding: 10,
+              paddingLeft: "1.5em",
+              paddingRight: "1.5em"
             }
           }}
-        >
-          <Grid item sx={{
-            marginLeft: matchesSM ? 0 : "5em",
-            textAlign: matchesSM ? "center" : undefined
-          }}>
-            <Typography variant="h4">
-              Custom Integrations
-            </Typography>
+        >  
+          <Grid 
+            item
+            sx={{
+              maxWidth: "35em"
+            }}
+          >
             <Typography 
               variant="subtitle1"
+              color="black"
+              fontWeight={500}
               sx={{
+                fontStyle: "italic",
                 marginBottom: "1em"
               }}
             >
-              Save Energy. Save Time. Save Money.
+              All the information you need, in one place 
             </Typography>
             <Typography variant='subtitle1'>
-              Complete digital solutions, built from the ground{" "} <span style={{fontFamily: "Pacifico",
-                  color: theme.palette.common.orange,}}>up</span>
+              Instead of jumping between your various knowledge bases, edit and deploy information at scale from one platform. We use APIs from Google Drive, Confluence, and more to bring you the information you need to answer questions.
             </Typography>
-            <Button 
-              variant="outlined"
-              component={Link}
-              to="/customsoftware"
-              onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
-              sx={{
-                ...theme.typography.learnButton,
-                fontSize: "0.7rem",
-                height: 35,
-                [theme.breakpoints.down("md")]: {
-                  marginBottom: "2em",
-                }
-              }}
-            >
-              <span 
-                style={{
-                  marginRight: 10,
-                }}
-              >Learn More</span> 
-              <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
-            </Button>
           </Grid>
-          <Grid item>
+          <Grid item alignSelf="center">
             <Box
               component="img"
               alt="Company Logos"
-              src={integrationsIcon}
+              src={centralizedIcon}
               sx={{
                 width: "13em",
                 marginLeft: "2em",
@@ -153,142 +147,67 @@ const Services = (props) => {
         </Grid>
       </Grid>
 
-      {/* IOS/Android App Development */}
+      {/* Data Analysis Block */}
+      <Typography 
+        variant="h3" 
+        align="center"
+        sx={{
+          marginTop: "1em"
+        }} 
+        gutterBottom
+      >
+        Data Analysis
+      </Typography>
       <Grid item>
         <Grid 
-          container 
-          direction="row"
-          justifyContent={matchesSM ? "center": "flex-end"}
+          container
+          justifyContent={matchesMD ? "center" : "space-between"}
+          direction={matchesMD ? "column":"row"}
           sx={{
-            marginTop: "12em",
+            paddingTop: "3em",
+            paddingBottom: "3em",
+            paddingLeft: "5em",
+            paddingRight: "5em",
             [theme.breakpoints.down("sm")]: {
-              padding: 10,
+              paddingLeft: "1.5em",
+              paddingRight: "1.5em"
             }
           }}
-        >
-          <Grid item sx={{
-            textAlign: matchesSM ? "center" : undefined
-          }}>
-            <Typography variant="h4">
-              Data Centralization
-            </Typography>
+        >  
+          <Grid 
+            item
+            sx={{
+              maxWidth: "35em"
+            }}
+          >
             <Typography 
               variant="subtitle1"
+              color="black"
+              fontWeight={500}
               sx={{
+                fontStyle: "italic",
                 marginBottom: "1em"
               }}
             >
-              Extend Functionality. Extend Access. Increase Engagement.
+              Combining user feedback with machine learning to make your job easier
             </Typography>
             <Typography variant='subtitle1'>
-              Integrate your data
+              Gravity will alert you the moment answers have gone out of date, it will surface the most frequently asked questions, and it will even keep a running list of unanswered questions in one central location.
             </Typography>
-            <Button 
-              component={Link}
-              to="/mobileapps"
-              variant="outlined"
-              onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
-              sx={{
-                ...theme.typography.learnButton,
-                fontSize: "0.7rem",
-                height: 35,
-                [theme.breakpoints.down("md")]: {
-                  marginBottom: "2em",
-                }
-              }}
-            >
-              <span 
-                style={{
-                  marginRight: 10,
-                }}
-              >Learn More</span> 
-              <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
-            </Button>
           </Grid>
-          <Grid item sx={{marginRight: matchesSM ? 0 : "5em"}}>
+          <Grid item alignSelf="center">
             <Box
-              sx={{
-                width: "13em",
-                marginLeft: "2em",
-                [theme.breakpoints.down("sm")]: {
-                  marginLeft: 0
-                }
-              }}
               component="img"
-              alt="Mobile Apps Icon"
-              src={centralizedIcon}
-            >
-            </Box>
-          </Grid>
-        </Grid>
-      </Grid>
-
-      {/* Websites Block */}
-      <Grid item>
-        <Grid 
-          container 
-          direction="row"
-          justifyContent={matchesSM ? "center": undefined}
-          sx={{
-            marginTop: "12em",
-            [theme.breakpoints.down("sm")]: {
-              padding: 10,
-            }
-          }}
-        >
-          <Grid item sx={{
-            marginLeft: matchesSM ? 0 : "5em",
-            textAlign: matchesSM ? "center" : undefined
-          }}>
-            <Typography variant="h4">
-              Data Analysis
-            </Typography>
-            <Typography 
-              variant="subtitle1"
-              sx={{
-                marginBottom: "1em"
-              }}
-            >
-              Watch More. Discover More. Sell More.
-            </Typography>
-            <Typography variant='subtitle1'>
-              Use your data to discover trends
-            </Typography>
-            <Button 
-              component={Link}
-              to="/websites"
-              variant="outlined"
-              onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
-              sx={{
-                ...theme.typography.learnButton,
-                fontSize: "0.7rem",
-                height: 35,
-                [theme.breakpoints.down("md")]: {
-                  marginBottom: "2em",
-                }
-              }}
-            >
-              <span 
-                style={{
-                  marginRight: 10,
-                }}
-              >Learn More</span> 
-              <ButtonArrow width={10} height={10} fill={theme.palette.common.blue}/>
-            </Button>
-          </Grid>
-          <Grid item sx={{marginRight: matchesSM ? 0 : "5em"}}>
-            <Box
-              sx={{
-                width: "13em",
-                marginLeft: "2em",
-                [theme.breakpoints.down("sm")]: {
-                  marginLeft: 0
-                }
-              }}
-              component="img"
-              alt="website icon"
+              alt="Company Logos"
               src={heuristicsIcon}
-            >
+              sx={{
+                width: "13em",
+                marginLeft: "2em",
+                [theme.breakpoints.down("sm")]: {
+                  marginLeft: 0
+                },
+              }}
+            > 
             </Box>
           </Grid>
         </Grid>

@@ -4,6 +4,7 @@ import { Typography, Grid } from '@mui/material'
 import { useMediaQuery } from '@mui/material'
 import history from '../assets/history.svg'
 import CallToAction from '../components/CallToAction'
+import { useEffect } from 'react'
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -72,6 +73,10 @@ const data = [
 const About = (props) => {
   const theme = useTheme()
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Grid container direction="column">

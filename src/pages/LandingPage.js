@@ -1,6 +1,5 @@
 import React from 'react'
 import Lottie from 'react-lottie'
-import animationData from '../animations/landinganimation/data'
 import { Grid, Button, Typography, Box, Card, CardContent } from '@mui/material'
 import CallToAction from '../components/CallToAction'
 import { Link } from 'react-router-dom'
@@ -12,6 +11,7 @@ import { useMediaQuery } from '@mui/material'
 import integrationsIcon from '../assets/gravityGradientIntegrationsIcon.svg'
 import revolutionBackground from '../assets/repeatingBackground.svg'
 import spaceride from '../animations/spaceride.json'
+import { useEffect } from 'react'
 
 
 const LandingPage = (props) => {
@@ -26,6 +26,10 @@ const LandingPage = (props) => {
 
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Grid 
@@ -154,7 +158,7 @@ const LandingPage = (props) => {
             <Button 
               variant="outlined"
               component={Link}
-              to="/customintegrations"
+              to="/services"
               onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
               sx={{
                 ...theme.typography.learnButton,
@@ -224,7 +228,7 @@ const LandingPage = (props) => {
             </Typography>
             <Button 
               component={Link}
-              to="/datacentralization"
+              to="/services"
               variant="outlined"
               onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
               sx={{
@@ -296,7 +300,7 @@ const LandingPage = (props) => {
             </Typography>
             <Button 
               component={Link}
-              to="/analysis"
+              to="/services"
               variant="outlined"
               onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
               sx={{
