@@ -103,6 +103,7 @@ const LandingPage = (props) => {
           <Grid 
             item 
             sm
+            alignSelf="center"
             sx={{
               maxWidth: "50em",
               minWidth: "21em",
@@ -111,6 +112,8 @@ const LandingPage = (props) => {
               marginLeft: "10%",
               [theme.breakpoints.down("sm")]: {
                 maxWidth: 30,
+                marginLeft: 0,
+                marginRight: "1em",
               }
             }}
           >

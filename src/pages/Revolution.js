@@ -212,11 +212,11 @@ const Revolution = (props) => {
           paddingLeft: "5em",
           paddingRight: "5em",
           [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
+            paddingLeft: '.5em',
+            paddingRight: '.5em',
           },
           backgroundColor: "#39B54A",
-          height: matchesMD ? "60em" : "45em"
+          height: matchesMD ? "75em" : "45em"
         }} 
         justifyContent={matchesMD ? "flex-start" : "center"}
       >
@@ -277,8 +277,8 @@ const Revolution = (props) => {
         <Grid item md style={{alignSelf: "center"}}>
           <Lottie 
             options={defaultOptions}
-            height={400}
-            width={400}
+            height={matchesSM? 300 : 400}
+            width={matchesSM? 300 : 400}
           >
           </Lottie>
         </Grid>
@@ -294,11 +294,11 @@ const Revolution = (props) => {
           paddingLeft: "5em",
           paddingRight: "5em",
           [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
+            paddingLeft: '.5em',
+            paddingRight: '.5em',
           },
           backgroundColor: "#8E45CE",
-          height: matchesMD ? "60em" : "45em"
+          height: matchesMD ? "75em" : "45em"
         }} 
         justifyContent={matchesMD ? "flex-start" : "center"}
       >
@@ -359,8 +359,8 @@ const Revolution = (props) => {
         <Grid item md style={{alignSelf: "center"}}>
           <Lottie 
             options={mlOptions}
-            height={400}
-            width={400}
+            height={matchesSM? 300 : 400}
+            width={matchesSM? 300 : 400}
           >
           </Lottie>
         </Grid>
@@ -378,11 +378,11 @@ const Revolution = (props) => {
           paddingLeft: "5em",
           paddingRight: "5em",
           [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
+            paddingLeft: '.5em',
+            paddingRight: '.5em',
           },
           backgroundColor: "#86C0F6",
-          height: matchesMD ? "65em" : "50em"
+          height: matchesMD ? "75em" : "50em"
         }} 
         justifyContent={matchesMD ? "flex-start" : "center"}
       >
@@ -440,8 +440,8 @@ const Revolution = (props) => {
         <Grid item md style={{alignSelf: "center"}}>
           <Lottie 
               options={dominoOptions}
-              height={400}
-              width={400}
+              height={matchesSM? 300 : 400}
+              width={matchesSM? 300 : 400}
             >
             </Lottie>
         </Grid>
