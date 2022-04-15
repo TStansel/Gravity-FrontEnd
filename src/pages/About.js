@@ -26,9 +26,9 @@ const data = [
     github: null
   },
   {
-    name: "Dell Wijesundra",
+    name: "Dell Wijesundera",
     linkedin: "https://www.linkedin.com/in/dallana-wijesundera/",
-    role: "Product Manager",
+    role: "CEO",
     photo: dell,
     github: null
   },
