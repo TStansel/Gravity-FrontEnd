@@ -5,34 +5,41 @@ import theme from './Theme';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from '@mui/material'; 
-import Pricing from './pages/Pricing';
 import LandingPage from './pages/LandingPage';
 import Services from './pages/Services';
-import CustomSoftware from './pages/CustomSoftware';
-import MobileApps from './pages/MobileApps';
-import Websites from './pages/Websites';
 import Revolution from './pages/Revolution';
+import About from './pages/About';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import CustomIntegrations from './pages/CustomIntegrations';
+import DataCentralization from './pages/DataCentralization';
+import Analysis from './pages/Analysis';
+import Contact from './pages/Contact';
 
 const App = () => {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [value, setValue] = useState(0);
 
   return (
-    <Router>
-      <ThemeProvider theme={theme}>
-        <Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
-        <Routes>
-          <Route path='/' element={<LandingPage setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-          <Route path='/pricing' element={<Pricing/>}/>
-          <Route path='/services' element={<Services setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-          <Route path='/customsoftware' element={<CustomSoftware setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-          <Route path='/mobileapps' element={<MobileApps setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-          <Route path='/websites' element={<Websites setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-          <Route path='/revolution' element={<Revolution setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
-        </Routes>
-        <Footer setValue={setValue} setSelectedIndex={setSelectedIndex}/>
-      </ThemeProvider>
-    </Router>
+    <>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
+          <Routes>
+            <Route path='/' element={<LandingPage setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/services' element={<Services setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/customintegrations' element={<CustomIntegrations setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/datacentralization' element={<DataCentralization setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/analysis' element={<Analysis setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/howitworks' element={<Revolution setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/about' element={<About setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+            <Route path='/contact' element={<Contact setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+          </Routes>
+          <Footer setValue={setValue} setSelectedIndex={setSelectedIndex}/>
+        </ThemeProvider>
+      </Router>
+      <ToastContainer/>
+    </>
   )
 }
 

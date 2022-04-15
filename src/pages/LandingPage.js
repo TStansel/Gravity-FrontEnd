@@ -11,12 +11,14 @@ import heuristicsIcon from '../assets/gravityGradientHeuristicsIcon.svg'
 import { useMediaQuery } from '@mui/material'
 import integrationsIcon from '../assets/gravityGradientIntegrationsIcon.svg'
 import revolutionBackground from '../assets/repeatingBackground.svg'
+import spaceride from '../animations/spaceride.json'
+
 
 const LandingPage = (props) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: spaceride,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -62,7 +64,7 @@ const LandingPage = (props) => {
                   variant='contained'
                   component={Link}
                   onClick={() => props.setValue(5)}
-                  to="/demo"
+                  to="/contact"
                   sx={(theme) => ({
                     ...theme.typography.estimate,
                     backgroundColor: theme.palette.common.orange,
@@ -74,7 +76,7 @@ const LandingPage = (props) => {
                       backgroundColor: theme.palette.secondary.light,
                     }
                   })}
-                >Demo</Button>
+                >Contact Us</Button>
               </Grid>
               <Grid item>
                 <Button 
@@ -101,6 +103,7 @@ const LandingPage = (props) => {
               maxWidth: "50em",
               minWidth: "21em",
               marginTop: "2em",
+              marginRight: "10%",
               marginLeft: "10%",
               [theme.breakpoints.down("sm")]: {
                 maxWidth: 30,
@@ -109,14 +112,14 @@ const LandingPage = (props) => {
           >
            <Lottie
               options={defaultOptions} 
-              height={"100%"}
-              width={"100%"}
+              height={"75%"}
+              width={"75%"}
            ></Lottie> 
           </Grid>
         </Grid>
       </Grid>
       {/* End of Hero Block */}
-      {/* Custom Software Block */}
+      {/* Custom Integrations Block */}
       <Grid item>
         <Grid 
           container 
@@ -131,6 +134,7 @@ const LandingPage = (props) => {
         >
           <Grid item sx={{
             marginLeft: matchesSM ? 0 : "5em",
+            maxWidth: "26em",
             textAlign: matchesSM ? "center" : undefined
           }}>
             <Typography variant="h4">
@@ -142,16 +146,15 @@ const LandingPage = (props) => {
                 marginBottom: "1em"
               }}
             >
-              Save Energy. Save Time. Save Money.
+              Answering questions where they're asked, when they're asked 
             </Typography>
             <Typography variant='subtitle1'>
-              Complete digital solutions, built from the ground{" "} <span style={{fontFamily: "Pacifico",
-                  color: theme.palette.common.orange,}}>up</span>
+              Gravity integrates with top communication platforms like Slack so we can identify redundant questions and answer them for you
             </Typography>
             <Button 
               variant="outlined"
               component={Link}
-              to="/customsoftware"
+              to="/customintegrations"
               onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
               sx={{
                 ...theme.typography.learnButton,
@@ -173,7 +176,7 @@ const LandingPage = (props) => {
           <Grid item>
             <Box
               component="img"
-              alt="Company Logos"
+              alt="Integrations Icon"
               src={integrationsIcon}
               sx={{
                 width: "13em",
@@ -188,7 +191,7 @@ const LandingPage = (props) => {
         </Grid>
       </Grid>
 
-      {/* IOS/Android App Development */}
+      {/* Data Centralization */}
       <Grid item>
         <Grid 
           container 
@@ -202,6 +205,7 @@ const LandingPage = (props) => {
           }}
         >
           <Grid item sx={{
+            maxWidth: "26em",
             textAlign: matchesSM ? "center" : undefined
           }}>
             <Typography variant="h4">
@@ -213,14 +217,14 @@ const LandingPage = (props) => {
                 marginBottom: "1em"
               }}
             >
-              Extend Functionality. Extend Access. Increase Engagement.
+              All the information you need, in one place
             </Typography>
             <Typography variant='subtitle1'>
-              Integrate your data
+              Instead of jumping between your various knowledge bases, edit and deploy information at scale from one platform. We use APIs from Google Drive, Confluence, and more to bring you the information you need to answer questions.
             </Typography>
             <Button 
               component={Link}
-              to="/mobileapps"
+              to="/datacentralization"
               variant="outlined"
               onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
               sx={{
@@ -250,7 +254,7 @@ const LandingPage = (props) => {
                 }
               }}
               component="img"
-              alt="Mobile Apps Icon"
+              alt="Centralized Data Icon"
               src={centralizedIcon}
             >
             </Box>
@@ -258,7 +262,7 @@ const LandingPage = (props) => {
         </Grid>
       </Grid>
 
-      {/* Websites Block */}
+      {/* Data Analysis Block */}
       <Grid item>
         <Grid 
           container 
@@ -272,6 +276,7 @@ const LandingPage = (props) => {
           }}
         >
           <Grid item sx={{
+            maxWidth: "26em",
             marginLeft: matchesSM ? 0 : "5em",
             textAlign: matchesSM ? "center" : undefined
           }}>
@@ -284,14 +289,14 @@ const LandingPage = (props) => {
                 marginBottom: "1em"
               }}
             >
-              Watch More. Discover More. Sell More.
+              Combining user feedback with machine learning to make your job easier
             </Typography>
             <Typography variant='subtitle1'>
-              Use your data to discover trends
+            Gravity will alert you the moment answers have gone out of date, it will surface the most frequently asked questions, and it will even keep a running list of unanswered questions in one central location.
             </Typography>
             <Button 
               component={Link}
-              to="/websites"
+              to="/analysis"
               variant="outlined"
               onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
               sx={{
@@ -364,14 +369,14 @@ const LandingPage = (props) => {
               >
                 <Grid item>
                   <Typography variant="h3" gutterBottom>
-                    The Revolution
+                    How It Works
                   </Typography>
                 </Grid>
                 <Grid 
                   item
               >
                   <Typography variant="subtitle1">
-                    Visionary insights coupled with cutting edge technology is a recipe for revolution
+                    Stop wasting your time on slack all day and get back to doing what you love.
                   </Typography>
                   <Button 
                     onClick={() => props.setValue(2)}
@@ -393,7 +398,7 @@ const LandingPage = (props) => {
           </Card>
           <Box
             component="img"
-            alt="Company Logos"
+            alt="Background Image"
             src={revolutionBackground}
             sx={{
               backgroundPosition: "center",
@@ -442,7 +447,7 @@ const LandingPage = (props) => {
                 About Us
               </Typography>
               <Typography variant="subtitle2">
-                Let's get personal.
+                Our Story.
               </Typography>
               <Grid item>
                 <Button 

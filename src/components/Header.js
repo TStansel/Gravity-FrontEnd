@@ -49,9 +49,9 @@ const Header = (props) => {
 
   const menuOptions = useMemo(() => ([
     {name: 'Services', link: '/services', activeIndex: 0, selectedIndex: 0},
-    {name: 'Custom Software Development', link: '/customsoftware', activeIndex: 0, selectedIndex: 1},
-    {name: 'Mobile App Develpment', link: '/mobileapps', activeIndex: 0, selectedIndex: 2},
-    {name: 'Website Development', link: '/websites', activeIndex: 0, selectedIndex: 3},
+    {name: 'Custom Integrations', link: '/customintegrations', activeIndex: 0, selectedIndex: 1},
+    {name: 'Data Centralization', link: '/datacentralization', activeIndex: 0, selectedIndex: 2},
+    {name: 'Data Analysis', link: '/analysis', activeIndex: 0, selectedIndex: 3},
   ]), [])
 
   const routes = useMemo(() => ([
@@ -65,7 +65,6 @@ const Header = (props) => {
     },
     {name: "How It Works", link: "/howitworks", activeIndex: 1},
     {name: "About Us", link: "/about", activeIndex: 2},
-    {name: "Pricing", link: "/pricing", activeIndex: 3},
   ]), [anchorEl])
 
   useEffect(() => {
@@ -82,8 +81,8 @@ const Header = (props) => {
             }
           }
           break;
-        case "/demo":
-          props.setValue(5);
+        case "/contact":
+          props.setValue(3);
           break;
         default:
           break;
@@ -124,7 +123,7 @@ const Header = (props) => {
         variant="contained" 
         color="secondary"
         component={Link}
-        to="/demo"
+        to="/contact"
         onClick={() => props.setValue(5)}
         sx={(theme) => ({
           ...theme.typography.estimate,
@@ -137,9 +136,9 @@ const Header = (props) => {
           }
         })}
       >
-        Demo
+        Contact
       </Button>
-      <Menu
+      {/* <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         open={openMenu}
@@ -167,17 +166,16 @@ const Header = (props) => {
             key={i}
             sx={(theme) => ({
               ...theme.typography.tab,
-              opacity: 0.7,
+              opacity: 0.6,
               "&:hover": {
                 opacity: 1
               },
             })}
             to={option.link}
-            selected={i === props.selectedIndex && props.value === 1}
           >
             {option.name}
           </MenuItem>))}
-      </Menu>
+      </Menu> */}
     </>
   )
 
@@ -215,14 +213,16 @@ const Header = (props) => {
                 onClick={() => {setOpenDrawer(false); props.setValue(route.activeIndex)}}
                 divider
                 component={Link}
-                selected={props.value === route.activeIndex}
+                sx={{
+                  backgroundColor: props.value === route.activeIndex ? theme.palette.common.orange : "",
+                }}
                 to={route.link}
               >
                 <ListItemText
                   disableTypography
                   sx={(theme) => ({
                     ...theme.typography.tab,
-                    opacity: props.value === route.activeIndex ? 1 : 0.7,
+                    opacity: props.value === route.activeIndex ? 1 : 0.6,
                   })}
                 >
                   {route.name}
@@ -235,22 +235,18 @@ const Header = (props) => {
             divider
             component={Link}
             sx={(theme) => ({
-              backgroundColor: theme.palette.common.orange,
-              "&:hover": {
-                backgroundColor: theme.palette.secondary.light,
-              } 
+              backgroundColor: props.value === 3 ? theme.palette.common.orange : "",
             })}
-            selected={props.value === 5}
-            to="/demo"
+            to="/contact"
           >
             <ListItemText 
               disableTypography
               sx={(theme) => ({
                ...theme.typography.tab,
-               opacity: props.value === 0 ? 5 : 0.7,
+               opacity: props.value === 3 ? 1 : 0.6,
               })}
             >
-              Demo
+              Contact
             </ListItemText>
           </ListItemButton>
         </List>

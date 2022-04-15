@@ -15,7 +15,7 @@ import engagement from '../assets/increaseEngagement.svg'
 
 import CallToAction from '../components/CallToAction'
 
-const MobileApps = (props) => {
+const DataCentralization = (props) => {
   const theme = useTheme()
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
@@ -81,12 +81,12 @@ const MobileApps = (props) => {
         >
           <Grid item>
             <Typography align={matchesMD ? "center" : undefined} variant="h2">
-              iOS/Android App Development
+             Data Centralization 
             </Typography>
           </Grid>
           <Grid item>
             <Typography align={matchesMD ? "center" : undefined} variant="body1" paragraph>
-              Mobile Apps allow you to take your tools on the go.
+              Data Centralization helps you manage your data
             </Typography>
             <Typography align={matchesMD ? "center" : undefined} variant="body1" paragraph>
               Convenience. Connection.
@@ -242,4 +242,4 @@ const MobileApps = (props) => {
   )
 }
 
-export default MobileApps
+export default DataCentralization

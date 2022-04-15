@@ -13,7 +13,7 @@ import outreach from '../assets/outreach.svg'
 import ecommerce from '../assets/ecommerce.svg'
 import CallToAction from '../components/CallToAction'
 
-const Websites = (props) => {
+const Analysis = (props) => {
   const theme = useTheme()
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
@@ -70,19 +70,15 @@ const Websites = (props) => {
         >
           <Grid item>
             <Typography align={matchesMD ? "center" : undefined} variant="h2">
-              Website Development
+              Data Analysis
             </Typography>
           </Grid>
           <Grid item>
             <Typography align={matchesMD ? "center" : undefined} variant="body1" paragraph>
-              Having a website is a necessity in today's business world. They
-              give you one central, public location to let people know who you
-              are, what you do, and why you're the best at it.
+              Blurb about Data Analysis here
             </Typography>
             <Typography align={matchesMD ? "center" : undefined} variant="body1" paragraph>
-              From simply having your hours posted to having a full fledged
-              online store, making yourself as accessible as possible to users
-              online drives growth and enables you to reach new customers.
+              Advantage of this here.
             </Typography>
           </Grid>
         </Grid>
@@ -315,4 +311,4 @@ const Websites = (props) => {
   )
 }
 
-export default Websites
+export default Analysis

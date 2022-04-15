@@ -35,16 +35,16 @@ const CallToAction = (props) => {
           <Grid container direction="column">
             <Grid item>
               <Typography variant="h2">
-                Simple Software. <br/> Revolutionary Results.
+                Making the Q&A Process Seamless
               </Typography>
               <Typography variant="subtitle2" sx={{fontSize: "1.5rem"}}>
-                Take Advantage of the 21st Century
+                We'll find the answers so you don't have to
               </Typography>
               <Grid container justifyContent={matchesSM ? "center" : undefined} item>
                   <Button 
                       onClick={() => props.setValue(4)}
                       component={Link}
-                      to="/demo"
+                      to="/howitworks"
                       variant="outlined"
                       sx={(theme) => ({
                         ...theme.typography.learnButton,
@@ -64,6 +64,8 @@ const CallToAction = (props) => {
         <Grid item>
           <Button 
             onClick={() => props.setValue(5)}
+            component={Link}
+            to="/contact"
             variant="contained"
             sx={{
               ...theme.typography.estimate,
@@ -84,7 +86,7 @@ const CallToAction = (props) => {
               }
             }}
           >
-            Free Estimate
+            Contact Us
           </Button>
         </Grid>
     </Grid>

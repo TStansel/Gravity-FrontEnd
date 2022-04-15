@@ -2,9 +2,7 @@ import { useTheme, Box, Grid, Hidden, Typography } from "@mui/material"
 import footerAdornment from '../assets/gravityicon.svg'
 import React from "react"
 import { Link } from "react-router-dom"
-import facebook from '../assets/facebook.svg'
-import twitter from '../assets/twitter.svg'
-import instagram from '../assets/instagram.svg'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 function Copyright(props) {
@@ -60,7 +58,7 @@ const Footer = (props) => {
               <Grid 
                 item
                 component={Link}
-                to="/customsoftware"
+                to="/customintegrations"
                 onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
                 sx={{
                   color: "white",
@@ -70,12 +68,12 @@ const Footer = (props) => {
                   textDecoration: "none",
                 }}
               >
-                Custom Software Development
+                Custom Integrations
               </Grid>
               <Grid 
                 item
                 component={Link}
-                to="/mobileapps"
+                to="/datacentralization"
                 onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
                 sx={{
                   color: "white",
@@ -85,12 +83,12 @@ const Footer = (props) => {
                   textDecoration: "none",
                 }}
               >
-                Mobile App Development
+                Data Centralization
               </Grid>
               <Grid 
                 item
                 component={Link}
-                to="/websites"
+                to="/analysis"
                 onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
                 sx={{
                   color: "white",
@@ -100,7 +98,7 @@ const Footer = (props) => {
                   textDecoration: "none",
                 }}
               >
-                Website Development
+                Data Analysis
               </Grid>
             </Grid>
           </Grid>
@@ -119,7 +117,7 @@ const Footer = (props) => {
                   textDecoration: "none",
                 }}
               >
-                The Revolution
+                How It Works
               </Grid>
               <Grid 
                 item
@@ -260,47 +258,10 @@ const Footer = (props) => {
           rel="noopener noreferrer" 
           target="_blank"
         >
-          <Box
-            component="img"
-            alt="Facebook Logo"
-            src={facebook}
+          <LinkedInIcon 
             sx={{
-              height: "4em",
-              width: "4em",
-              [theme.breakpoints.down("sm")]: {
-                height: "2.5em",
-                width: "2.5em",
-              }
-            }}
-          />
-        </Grid>
-        <Grid item component="a" href="https://www.twitter.com" rel="noopener noreferrer" target="_blank">
-          <Box
-            component="img"
-            alt="Twitter Logo"
-            src={twitter}
-            sx={{
-              height: "4em",
-              width: "4em",
-              [theme.breakpoints.down("sm")]: {
-                height: "2.5em",
-                width: "2.5em",
-              }
-            }}
-          />
-        </Grid>
-        <Grid item component="a" href="https://www.instagram.com" rel="noopener noreferrer" target="_blank">
-          <Box
-            component="img"
-            alt="Instagram Logo"
-            src={instagram}
-            sx={{
-              height: "4em",
-              width: "4em",
-              [theme.breakpoints.down("sm")]: {
-                height: "2.5em",
-                width: "2.5em",
-              }
+              color: "#fff",
+              fontSize: "4em"
             }}
           />
         </Grid>

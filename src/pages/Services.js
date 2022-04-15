@@ -11,9 +11,76 @@ const Services = (props) => {
 
   const theme = useTheme()
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
     <Grid container direction="column">
+      {/* Custom Integrations Block */}
+      <Typography 
+        variant="h3" 
+        align="center"
+        sx={{
+          marginTop: "1em"
+        }} 
+        gutterBottom
+      >
+        Custom Integrations
+      </Typography>
+      <Grid item>
+        <Grid 
+          container
+          justifyContent={matchesMD ? "center" : "space-between"}
+          direction={matchesMD ? "column":"row"}
+          sx={{
+            paddingTop: "3em",
+            paddingLeft: "5em",
+            paddingRight: "5em",
+            [theme.breakpoints.down("sm")]: {
+              paddingLeft: "1.5em",
+              paddingRight: "1.5em"
+            }
+          }}
+        >  
+          <Grid 
+            item
+            sx={{
+              maxWidth: "35em"
+            }}
+          >
+            <Typography 
+              variant="subtitle1"
+              color="black"
+              fontWeight={500}
+              sx={{
+                fontStyle: "italic",
+                marginBottom: "1em"
+              }}
+            >
+              Answering questions where they're asked, when they're asked 
+            </Typography>
+            <Typography variant='subtitle1'>
+              Gravity integrates with top communication platforms like Slack so we can identify redundant questions and answer them for you
+            </Typography>
+          </Grid>
+          <Grid item alignSelf="center">
+            <Box
+              component="img"
+              alt="Company Logos"
+              src={integrationsIcon}
+              sx={{
+                width: "13em",
+                marginLeft: "2em",
+                [theme.breakpoints.down("sm")]: {
+                  marginLeft: 0
+                },
+              }}
+            > 
+            </Box>
+          </Grid>
+        </Grid>
+      </Grid>
+
+
       {/* Custom Software Block */}
       <Grid item>
         <Grid 

@@ -2,18 +2,12 @@ import React from 'react'
 import { useTheme } from '@mui/material'
 import { Typography, Grid } from '@mui/material'
 import { useMediaQuery } from '@mui/material'
-import Lottie from 'react-lottie'
 
 import vision from '../assets/vision.svg'
-import consultation from '../assets/consultationIcon.svg'
-import mockup from '../assets/mockupIcon.svg'
 import review from '../assets/reviewIcon.svg'
-import design from '../assets/designIcon.svg'
-import build from '../assets/buildIcon.svg'
 import launch from '../assets/launchIcon.svg'
 import maintain from '../assets/maintainIcon.svg'
 import iterate from '../assets/iterateIcon.svg'
-import technologyAnimation from '../animations/technologyAnimation/data.json'
 import CallToAction from '../components/CallToAction'
 
 const Revolution = (props) => {
@@ -21,14 +15,14 @@ const Revolution = (props) => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"))
   
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: technologyAnimation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  }
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: technologyAnimation,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice'
+  //   }
+  // }
 
   return (
     <Grid container direction="column">
@@ -48,7 +42,7 @@ const Revolution = (props) => {
           align={matchesMD ? "center" : undefined}
           style={{fontFamily: "pacifico"}}
         >
-          The Revolution
+          How It Works
         </Typography>
       </Grid>
       <Grid 
@@ -91,49 +85,21 @@ const Revolution = (props) => {
               variant="body1"
               paragraph
             >
-              The rise of computers, and subsequently the Internet, has
-              completely altered every aspect of human life. This has increased
-              our comfort, broadened our connections, and reshaped how we view
-              the world.
+              Gravity has never been more necessary for successful companies as it is now. First of all, as work moves to a remote format, men and women that are used to asking questions in person and receiving immediate answers are still demanding quick responses in the form of Slack messages. As someone with the answers, this means you are going to spend hours every day just monitoring Slack. Second, there have been major advancements in deep learning over the past few years that allow machine learning models to understand English better than ever before. The result of this is that our question and answer pairing technology is extremely accurate. While your employees may not trust current answering bots because they are constantly providing poor answers, that is not the case with Gravity.
             </Typography>
             <Typography
               align={matchesMD ? "center" : "right"}
               variant="body1"
               paragraph
             >
-              What once was confined to huge rooms and teams of engineers now
-              resides in every single one of our hands. Harnessing this
-              unlimited potential by using it to solve problems and better lives
-              is at the heart of everything we do.
+              Our vision is to be your company’s backbone, providing much needed support day and night without you even thinking twice. We will do this by building more and more integrations that will feed data into our platform. By doing so, you will have access to all of your documentation, best practices, common systems, in one place. Not only that, but you will be able to make edits to this data and it will edit it across your company.
             </Typography>
             <Typography
               align={matchesMD ? "center" : "right"}
               variant="body1"
               paragraph
             >
-              We want to help businesses capitalize on the latest and greatest
-              technology. The best way to predict the future is to be the one
-              building it, and we want to help guide the world into this next
-              chapter of technological expansion, exploration, and innovation.
-            </Typography>
-            <Typography
-              align={matchesMD ? "center" : "right"}
-              variant="body1"
-              paragraph
-            >
-              By holding ourselves to rigorous standards and pristine quality,
-              we can ensure you have the absolute best tools necessary to thrive
-              in this new frontier.
-            </Typography>
-            <Typography
-              align={matchesMD ? "center" : "right"}
-              variant="body1"
-              paragraph
-            >
-              We see a future where every individual has personalized software
-              custom tailored to their lifestyle, culture, and interests,
-              helping them overcome life’s obstacles. Each project is a step
-              towards that goal.
+              As the world moves faster and faster, businesses need to cut out decelerators to keep up. The more time you waste answering questions you have already answered countless times, the more time your competitors have to surpass you. Instead, let us take care of onboarding, daily enablement, and more so that you can get back to doing what you love!
             </Typography>
           </Grid>
         </Grid>
@@ -141,12 +107,12 @@ const Revolution = (props) => {
 
 
       {/* Inverted Grid row */}
-      <Grid 
+      {/* <Grid 
         item 
         container 
         direction={matchesMD ? "column": "row"}
         sx={{
-          marginTop: "10em",
+          marginTop: "3em",
           marginBottom: "10em",
           paddingLeft: "5em",
           paddingRight: "5em",
@@ -173,51 +139,11 @@ const Revolution = (props) => {
               variant="body1"
               paragraph
             >
-              In 2013, Facebook invented a new way of building websites. This
-              new system, React.js, completely revolutionizes the process and
-              practice of website development.
-            </Typography>
-            <Typography
-              align={matchesMD ? "center" : undefined}
-              variant="body1"
-              paragraph
-            >
-              Instead of chaining together long individual pages, like
-              traditional websites, React websites are built with little chunks
-              of code called components. These components are faster, easier to
-              maintain, and are easily reused and customized, each serving a
-              singular purpose.
-            </Typography>
-            <Typography
-              align={matchesMD ? "center" : undefined}
-              variant="body1"
-              paragraph
-            >
-              Two years later they shocked the world by releasing a similar
-              system, React Native, for producing iOS and Android apps. Instead
-              of having to master two completely separate development platforms,
-              you can leverage the knowledge you already possessed from building
-              websites and reapply it directly! This was a huge leap forward.
-            </Typography>
-            <Typography
-              align={matchesMD ? "center" : undefined}
-              variant="body1"
-              paragraph
-            >
-              This technology is now being used by companies like AirBnB,
-              Microsoft, Netflix, Pinterest, Skype, Tesla, UberEats, and when
-              Facebook purchased Instagram large portions of it were even
-              rebuilt using React.
-            </Typography>
-            <Typography
-              align={matchesMD ? "center" : undefined}
-              variant="body1"
-              paragraph
-            >
-              These technical advancements translate into savings by
-              significantly reducing the workload and streamlining the workflow
-              for developing new pieces of software, while also lowering the
-              barrier to entry for mobile app development.
+              Cutting-edge advancements in machine learning like object
+              detection and natural language processing allow computers to do
+              things previously unimaginable, and our expertise and intuition
+              will help usher you into this new future of possibilities.
+
             </Typography>
           </Grid>
         </Grid>
@@ -227,12 +153,15 @@ const Revolution = (props) => {
             style= {{maxWidth: "40em", margin: 0}}
           />
         </Grid>
-      </Grid>
+      </Grid> */}
+
+      
       <Grid
         item
         container
         direction="row"
         sx={{
+          paddingTop: "2em",
           paddingLeft: "5em",
           paddingRight: "5em",
           [theme.breakpoints.down('sm')]: {
@@ -248,163 +177,6 @@ const Revolution = (props) => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid
-        item
-        container
-        direction={matchesMD ? "column" : "row"}
-        sx={{
-          paddingLeft: "5em",
-          paddingRight: "5em",
-          [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
-          },
-          backgroundColor: "#B3B3B3",
-          height: "90em"
-        }} 
-        justifyContent="center"
-      >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
-          <Grid item>
-            <Typography
-              variant="h4"
-              gutterBottom
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#000",
-                marginTop: "5em"
-              }}
-            >
-              Consultation
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant="body1"
-              align={matchesMD ? "center" : undefined}
-              paragraph
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Our process begins the moment you realize you need a piece of
-              technology for your business. Whether you already have an idea for
-              where to start and what to do, or if you just know you want to
-              step things up, our initial consultation will help you examine
-              your business holistically to find the best solutions.
-            </Typography>
-            <Typography
-              variant="body1"
-              align={matchesMD ? "center" : undefined}
-              paragraph
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Detailed notes will be taken on your requirements and constraints,
-              while taking care to identify other potential areas for
-              consideration.
-            </Typography>
-            <Typography
-              variant="body1"
-              align={matchesMD ? "center" : undefined}
-              paragraph
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Cutting-edge advancements in machine learning like object
-              detection and natural language processing allow computers to do
-              things previously unimaginable, and our expertise and intuition
-              will help usher you into this new future of possibilities.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img src={consultation} width="100%" style={{maxWidth: 700}} alt="Handshake"/>
-        </Grid>
-      </Grid>
-
-      {/* Mockup area */}
-      <Grid
-        item
-        container
-        direction={matchesMD ? "column" : "row"}
-        sx={{
-          paddingLeft: "5em",
-          paddingRight: "5em",
-          [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
-          },
-          backgroundColor: "#FF7373",
-          height: "90em"
-        }} 
-        justifyContent="center"
-      >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
-          <Grid item>
-            <Typography
-              variant="h4"
-              align={matchesMD ? "center" : undefined}
-              gutterBottom
-              style={{
-                color: "#000",
-                marginTop: "5em"
-              }}
-            >
-              Mockup
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant="body1"
-              align={matchesMD ? "center" : undefined}
-              paragraph
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              After we settle on the best path forward and decide on a solution
-              to pursue, details like the cost and timeline will be finalized.
-            </Typography>
-            <Typography
-              variant="body1"
-              align={matchesMD ? "center" : undefined}
-              paragraph
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Then it's time for us to start on your minimum viable product.
-              That's just a fancy term for a mockup, which doesn't include
-              colors, images, or any other polished design elements, but
-              captures the essential layout structure and functionality.
-            </Typography>
-            <Typography
-              variant="body1"
-              align={matchesMD ? "center" : undefined}
-              paragraph
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              This helps us understand and refine the solution itself before
-              getting distracted by specifics and looks.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img src={mockup} width="100%" style={{maxWidth: 1000}} alt="Basic website design outline"/>
-        </Grid>
-      </Grid>
-
       {/* Review area */}
       <Grid
         item
@@ -418,7 +190,7 @@ const Revolution = (props) => {
             paddingRight: '1.5em',
           },
           backgroundColor: "#39B54A",
-          height: "90em"
+          height: "40em"
         }} 
         justifyContent="center"
       >
@@ -433,7 +205,7 @@ const Revolution = (props) => {
                 marginTop: "5em"
               }}
             >
-              Review
+              Indexing
             </Typography>
           </Grid>
           <Grid item>
@@ -446,10 +218,8 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              Before moving any farther we come back to you with our progress.
-              This gives you the freedom to discuss any changes you may want or
-              any ideas you may have come up with before any heavy lifting has
-              been done.
+              Cutting-edge advancements in machine learning like natural language processing
+              have made 
             </Typography>
             <Typography
               variant="body1"
@@ -479,161 +249,7 @@ const Revolution = (props) => {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: "center"}}>
-          <img width="100%" src={review} alt="Magnifying glass"/>
-        </Grid>
-      </Grid>
-
-      {/* Design area */}
-      <Grid
-        item
-        container
-        direction={matchesMD ? "column" : "row"}
-        sx={{
-          paddingLeft: "5em",
-          paddingRight: "5em",
-          [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
-          },
-          backgroundColor: "#A67C52",
-          height: "90em"
-        }} 
-        justifyContent="center"
-      >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
-          <Grid item>
-            <Typography
-              variant="h4"
-              align={matchesMD ? "center" : undefined}
-              gutterBottom
-              style={{
-                color: "#000",
-                marginTop: "5em"
-              }}
-            >
-              Design
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Before moving any farther we come back to you with our progress.
-              This gives you the freedom to discuss any changes you may want or
-              any ideas you may have come up with before any heavy lifting has
-              been done.
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              We give you an interactive demonstration of the mockups,
-              thoroughly explaining the thought process that went into each
-              screen and every anticipated feature.
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Once you're completely satisfied with the vision for our solution
-              we get down to the nitty gritty, fine-details of design.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img width="100%" src={design} style={{maxWidth: 1000}} alt="Magnifying glass"/>
-        </Grid>
-      </Grid>
-
-
-      {/* Build area */}
-      <Grid
-        item
-        container
-        direction={matchesMD ? "column" : "row"}
-        sx={{
-          paddingLeft: "5em",
-          paddingRight: "5em",
-          [theme.breakpoints.down('sm')]: {
-            paddingLeft: '1.5em',
-            paddingRight: '1.5em',
-          },
-          backgroundColor: "#FBB03B",
-          height: "90em"
-        }} 
-        justifyContent="center"
-      >
-        <Grid item container direction="column" alignItems={matchesMD ? "center" : undefined} lg>
-          <Grid item>
-            <Typography
-              variant="h4"
-              gutterBottom
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#000",
-                marginTop: "5em"
-              }}
-            >
-              Build
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Here's where we get down to business.
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Engineering begins after your approval on the final designs. We
-              start by scaffolding out the project on a high level, prioritizing
-              some areas over others.
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              align={matchesMD ? "center" : undefined}
-              style={{
-                color: "#fff",
-                maxWidth: "20em"
-              }}
-            > 
-              Once you're completely satisfied with the vision for our solution
-              we get down to the nitty gritty, fine-details of design.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item lg style={{alignSelf: "center"}}>
-          <img width="100%" src={build} style={{maxWidth: matchesMD ? 700 : 1000}} alt="Building figure"/>
+          <img width="40%" src={review} alt="Magnifying glass"/>
         </Grid>
       </Grid>
 
@@ -650,7 +266,7 @@ const Revolution = (props) => {
             paddingRight: '1.5em',
           },
           backgroundColor: "#C1272D",
-          height: "90em"
+          height: "40em"
         }} 
         justifyContent="center"
       >
@@ -710,7 +326,7 @@ const Revolution = (props) => {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: "center"}}>
-          <img width="100%" src={launch} style={{maxWidth: 200}} alt="Building figure"/>
+          <img width="10%" src={launch} style={{maxWidth: 200}} alt="Rocket figure"/>
         </Grid>
       </Grid>
 
@@ -727,7 +343,7 @@ const Revolution = (props) => {
             paddingRight: '1.5em',
           },
           backgroundColor: "#8E45CE",
-          height: "90em"
+          height: "40em"
         }} 
         justifyContent="center"
       >
@@ -776,7 +392,7 @@ const Revolution = (props) => {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: "center"}}>
-          <img width="100%" src={maintain} style={{maxWidth: 500}} alt="Building figure"/>
+          <img width="40%" src={maintain} style={{maxWidth: 500}} alt="Building figure"/>
         </Grid>
       </Grid>
 
@@ -792,8 +408,8 @@ const Revolution = (props) => {
             paddingLeft: '1.5em',
             paddingRight: '1.5em',
           },
-          backgroundColor: "#29ABE2",
-          height: "90em"
+          backgroundColor: "#86C0F6",
+          height: "40em"
         }} 
         justifyContent="center"
       >
@@ -821,9 +437,9 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              The cycle repeats whenever you come up with a new idea for
-              extending your current project, or come up with a brand new system
-              entirely.
+              As more and more questions are asked,
+              Gravity's model becomes more and more robust,
+              and you can expect the answers to become 
             </Typography>
             <Typography
               variant="body1"
@@ -855,7 +471,7 @@ const Revolution = (props) => {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: "center"}}>
-          <img width="100%" src={iterate} alt="Falling Dominoes"/>
+          <img width="40%" src={iterate} alt="Falling Dominoes"/>
         </Grid>
       </Grid>
 
