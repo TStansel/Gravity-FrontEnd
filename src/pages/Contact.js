@@ -153,51 +153,8 @@ const Contact = (props) => {
                 A member of our support team will be in touch.
               </Typography>
             </Grid>
-            <Grid item container justifyContent="center" style={{ marginTop: "2em" }}>
-              <Grid item>
-                <img
-                  src={phoneIcon}
-                  alt="phone"
-                  style={{ marginRight: "0.5em" }}
-                />
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant="body1"
-                  style={{ color: theme.palette.common.blue, fontSize: "1rem" }}
-                >
-                  <a
-                    href="tel:5555555555"
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    (555) 555-5555
-                  </a>
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container justifyContent="center" style={{ marginBottom: "2em" }}>
-              <Grid item>
-                <img
-                  src={emailIcon}
-                  alt="envelope"
-                  style={{ marginRight: "0.5em", verticalAlign: "bottom" }}
-                />
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant="body1"
-                  style={{ color: theme.palette.common.blue, fontSize: "1rem" }}
-                >
-                  <a
-                    href="mailto:zachary@gmail.com"
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    cory@gmail.com
-                  </a>
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container direction="column" style={{ width: "20em" }}>
+            
+            <Grid item container direction="column" style={{ marginTop: "1em", width: "20em" }}>
               <Grid item style={{ marginBottom: "0.5em" }}>
                 <TextField
                   label="Name"

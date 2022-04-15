@@ -245,7 +245,7 @@ const Revolution = (props) => {
               }}
             > 
               Cutting-edge advancements in machine learning like natural language processing
-              have made 
+              have led to lots of innovation in the 21st century.
             </Typography>
             <Typography
               variant="body1"
@@ -256,9 +256,8 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              We give you an interactive demonstration of the mockups,
-              thoroughly explaining the thought process that went into each
-              screen and every anticipated feature.
+              Gravity is built upon these cutting-edge, state-of-the-art, models. We use the best technology 
+              available to give you the best user experience. 
             </Typography>
             <Typography
               variant="body1"
@@ -269,8 +268,8 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              Once you're completely satisfied with the vision for our solution
-              we get down to the nitty gritty, fine-details of design.
+              Once Gravity is added to your slack workspace, Gravity will go through the channel's history
+              and automatically index the questions and answers that have already been asked.
             </Typography>
           </Grid>
         </Grid>
@@ -326,8 +325,8 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              Cutting-edge advancements in machine learning like natural language processing
-              have made 
+              Once Gravity has indexed the past questions, it will build a predictive model to help answer
+              questions that will be asked in the future.
             </Typography>
             <Typography
               variant="body1"
@@ -338,9 +337,9 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              We give you an interactive demonstration of the mockups,
-              thoroughly explaining the thought process that went into each
-              screen and every anticipated feature.
+              Gravity will also automatically add all of the questions it has indexed to our front-end interface,
+              which will save you wasted time creating internal question and answer bank spread across different areas
+              of your organization.
             </Typography>
             <Typography
               variant="body1"
@@ -351,8 +350,8 @@ const Revolution = (props) => {
                 maxWidth: "20em"
               }}
             > 
-              Once you're completely satisfied with the vision for our solution
-              we get down to the nitty gritty, fine-details of design.
+              This way, you get the answers when and where you need them, without having to leave Slack to search through
+              unorganized documentation.
             </Typography>
           </Grid>
         </Grid>

@@ -273,6 +273,7 @@ const About = (props) => {
                     <Typography
                       align="center"
                       variant="body2"
+                      color="#EA4335"
                     >
                       {profile.role}
                     </Typography>
