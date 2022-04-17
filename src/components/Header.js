@@ -43,8 +43,6 @@ const Header = (props) => {
     setAnchorEl(null);
     setOpenMenu(false)
     props.setSelectedIndex(i);
-    console.log(`Selected index is now ${i}`)
-    console.log(`Value index is now ${props.value}`)
   }
 
   const menuOptions = useMemo(() => ([
